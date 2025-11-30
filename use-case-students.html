@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Virtue for Students - Boost Academic Performance</title>
+    <meta name="description" content="Stay focused on studies with Virtue. Block distractions, improve grades, and build better study habits." />
+    <meta name="theme-color" content="#e6f2de" />
+    <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: #ffffff;
+        }
+
+        .page-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .virtue-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #e6f2de;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .virtue-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virtue-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .virtue-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .virtue-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .virtue-nav a {
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        .virtue-nav a:hover {
+            color: #2c5f2d;
+        }
+
+        /* Hero Section */
+        .usecase-hero {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a3a1b 0%, #2c5f2d 100%);
+            text-align: center;
+        }
+
+        .usecase-hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .usecase-hero-subtitle {
+            font-size: 22px;
+            color: #e6f2de;
+            margin-bottom: 40px;
+        }
+
+        .usecase-hero-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .usecase-hero-benefit {
+            font-size: 18px;
+            color: #a8d5a8;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .usecase-hero-benefit::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .usecase-cta-btn {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            padding: 16px 40px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        .usecase-cta-btn:hover {
+            background: #222222;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Problem Section */
+        .usecase-problem {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+
+        .usecase-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .usecase-section-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .usecase-section-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444444;
+            margin-bottom: 20px;
+        }
+
+        /* Solution Section */
+        .usecase-solution {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+
+        /* Features Grid */
+        .usecase-features {
+            padding: 80px 20px;
+            background: #e6f2de;
+        }
+
+        .usecase-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 60px auto 0;
+        }
+
+        .usecase-feature-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .usecase-feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .usecase-feature-icon {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 20px;
+            color: #2c5f2d;
+        }
+
+        .usecase-feature-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .usecase-feature-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 12px;
+        }
+
+        .usecase-feature-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555555;
+        }
+
+        /* CTA Section */
+        .usecase-final-cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1a3a1b 0%, #2c5f2d 100%);
+            text-align: center;
+        }
+
+        .usecase-final-cta h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 24px;
+        }
+
+        .usecase-final-cta p {
+            font-size: 20px;
+            color: #e6f2de;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .virtue-footer {
+            background: #1a3a1b;
+            color: #e6f2de;
+            padding: 40px 20px 20px;
+        }
+
+        .virtue-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .virtue-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .virtue-footer-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .virtue-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .virtue-footer-links a {
+            color: #e6f2de;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .virtue-footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .virtue-footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(230, 242, 222, 0.2);
+            font-size: 14px;
+            color: rgba(230, 242, 222, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .usecase-hero-title {
+                font-size: 36px;
+            }
+
+            .usecase-hero-benefits {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .usecase-section-title {
+                font-size: 32px;
+            }
+
+            .virtue-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-root">
+    <!-- Header -->
+    <header class="virtue-header">
+        <div class="virtue-header-inner">
+            <a href="index.html" class="virtue-logo">
+                <img src="ColourLogo.png" alt="Virtue logo" class="virtue-logo-img" />
+            </a>
+            <nav class="virtue-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="usecase-hero">
+            <h1 class="usecase-hero-title">Virtue for Students</h1>
+            <p class="usecase-hero-subtitle">Ace your exams by eliminating digital distractions</p>
+            
+            <div class="usecase-hero-benefits">
+                <div class="usecase-hero-benefit">Better grades</div>
+                <div class="usecase-hero-benefit">Improved focus</div>
+                <div class="usecase-hero-benefit">Reduced stress</div>
+            </div>
+
+            <a href="https://play.google.com/store" target="_blank" class="usecase-cta-btn">Download Now</a>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="usecase-problem">
+            <div class="usecase-container">
+                <h2 class="usecase-section-title">The student struggle with digital distractions</h2>
+                <p class="usecase-section-text">
+                    Students today face unprecedented challenges staying focused. Social media, gaming apps, and constant notifications make studying nearly impossible. What should take 2 hours stretches into 5, with most time lost to mindless scrolling.
+                </p>
+                <p class="usecase-section-text">
+                    The pressure to perform academically while battling phone addiction creates stress and anxiety. Late-night cramming becomes the norm because daytime study sessions are constantly interrupted. Without proper boundaries, academic performance suffers and stress levels soar.
+                </p>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="usecase-solution">
+            <div class="usecase-container">
+                <h2 class="usecase-section-title">Study smarter with Virtue</h2>
+                <p class="usecase-section-text">
+                    Virtue helps students create distraction-free study environments by blocking social media, games, and other time-wasting apps during study hours. Set schedules that align with your classes and study sessions, ensuring you stay focused when it matters most.
+                </p>
+                <p class="usecase-section-text">
+                    With Virtue's <strong>commitment-based blocking</strong>, you can put money on the line to stay accountable—and earn rewards when you succeed. Students using Virtue report <strong>improved grades, better time management, and reduced academic stress</strong>. Turn your phone from a distraction into a study companion.
+                </p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="usecase-features">
+            <div class="usecase-container">
+                <h2 class="usecase-section-title">How Virtue helps students succeed</h2>
+            </div>
+            
+            <div class="usecase-features-grid">
+                <div class="usecase-feature-card">
+                    <div class="usecase-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="usecase-feature-title">Study mode blocking</h3>
+                    <p class="usecase-feature-description">Block Instagram, YouTube, and games during study hours. Focus on learning, not scrolling.</p>
+                </div>
+
+                <div class="usecase-feature-card">
+                    <div class="usecase-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="usecase-feature-title">Exam prep schedules</h3>
+                    <p class="usecase-feature-description">Create custom blocking schedules for exam weeks and important deadlines.</p>
+                </div>
+
+                <div class="usecase-feature-card">
+                    <div class="usecase-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="usecase-feature-title">Accountability with stakes</h3>
+                    <p class="usecase-feature-description">Put money on the line to stay committed. Earn rewards when you meet your study goals.</p>
+                </div>
+
+                <div class="usecase-feature-card">
+                    <div class="usecase-feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="usecase-feature-title">Earn while you learn</h3>
+                    <p class="usecase-feature-description">Get Virtue Coins for staying focused. Redeem for discounts on study materials and more.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="usecase-final-cta">
+            <h2>Ready to boost your grades?</h2>
+            <p>Join thousands of students who transformed their study habits and academic performance with Virtue.</p>
+            <a href="https://play.google.com/store" target="_blank" class="usecase-cta-btn">Download Virtue Now</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="virtue-footer">
+        <div class="virtue-footer-content">
+            <div class="virtue-footer-grid">
+                <div>
+                    <div class="virtue-footer-title">Virtue: Digital Detox</div>
+                    <p style="font-size:14px; line-height:1.6;">
+                        Helping you reclaim your time and build a healthier relationship with technology. Disconnect to reconnect.
+                    </p>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Quick Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="team.html">Team</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Get in Touch</div>
+                    <a href="mailto:support@virtue-digital-detox.in"><strong>General:</strong> support@virtue-digital-detox.in</a>
+                    <a href="mailto:careers@virtue-digital-detox.in"><strong>Careers:</strong> careers@virtue-digital-detox.in</a>
+                    <a href="mailto:partnerships@virtue-digital-detox.in"><strong>Partnerships:</strong> partnerships@virtue-digital-detox.in</a>
+                </div>
+            </div>
+            <div class="virtue-footer-bottom">
+                © 2024 Virtue: Digital Detox. All rights reserved. Built with intention. | <a href="privacy-policy.html" style="color: #e6f2de; text-decoration: underline;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

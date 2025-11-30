@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Careers - Virtue: Digital Detox</title>
+    <meta name="description" content="Join the Virtue: Digital Detox team" />
+    <meta name="theme-color" content="#e6f2de" />
+    <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: linear-gradient(135deg, #e6f2de 0%, #f9f9f9 100%);
+        }
+
+        .page-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .virtue-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #e6f2de;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .virtue-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virtue-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            text-decoration: none;
+        }
+
+        .virtue-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .virtue-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .virtue-nav a {
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .virtue-nav a:hover {
+            color: #2c5f2d;
+        }
+
+        /* Careers Section */
+        .virtue-join-section {
+            padding: 80px 20px;
+        }
+
+        .virtue-join-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .virtue-section-heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #1a3a1b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .virtue-section-subheading {
+            text-align: center;
+            font-size: 18px;
+            color: #444444;
+            margin-bottom: 50px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .virtue-join-content {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 28px;
+            padding: 50px;
+            box-shadow: 0 18px 60px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .virtue-join-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444444;
+            margin-bottom: 30px;
+        }
+
+        .virtue-join-highlight {
+            font-weight: 700;
+            color: #2c5f2d;
+        }
+
+        .virtue-join-cta {
+            display: inline-block;
+            padding: 16px 40px;
+            background: #2c5f2d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(44, 95, 45, 0.3);
+        }
+
+        .virtue-join-cta:hover {
+            background: #1a3a1b;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(44, 95, 45, 0.4);
+        }
+
+        .virtue-join-values {
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .virtue-join-values h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .virtue-join-values ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .virtue-join-values li {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444444;
+            margin-bottom: 16px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .virtue-join-values li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2c5f2d;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        /* Footer */
+        .virtue-footer {
+            background: #1a3a1b;
+            color: #e6f2de;
+            padding: 40px 20px 20px;
+        }
+
+        .virtue-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .virtue-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .virtue-footer-about {
+            max-width: 350px;
+        }
+
+        .virtue-footer-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .virtue-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .virtue-footer-links a {
+            color: #e6f2de;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .virtue-footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .virtue-footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(230, 242, 222, 0.2);
+            font-size: 14px;
+            color: rgba(230, 242, 222, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .virtue-section-heading {
+                font-size: 36px;
+            }
+
+            .virtue-join-content {
+                padding: 30px 25px;
+            }
+
+            .virtue-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-root">
+    <!-- Header -->
+    <header class="virtue-header">
+        <div class="virtue-header-inner">
+            <a href="index.html" class="virtue-logo">
+                <img src="ColourLogo.png" alt="Virtue logo" class="virtue-logo-img" />
+            </a>
+            <nav class="virtue-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="virtue-join-section">
+            <div class="virtue-join-container">
+                <h1 class="virtue-section-heading">Join Our Mission</h1>
+                <p class="virtue-section-subheading">Be Part of Something Meaningful</p>
+                
+                <div class="virtue-join-content">
+                    <p class="virtue-join-text">
+                        We are building more than an app — we are creating a movement towards <span class="virtue-join-highlight">intentional living</span> and <span class="virtue-join-highlight">digital wellness</span>.
+                    </p>
+                    <p class="virtue-join-text">
+                        If you are passionate about technology that empowers rather than distracts, if you believe in building products with purpose, and if you want to make a real impact on how people interact with their devices, we would love to hear from you.
+                    </p>
+                    
+                    <a href="mailto:careers@virtue-digital-detox.in" class="virtue-join-cta">
+                        Get in Touch
+                    </a>
+
+                    <div class="virtue-join-values">
+                        <h3>What We Value</h3>
+                        <ul>
+                            <li><strong>Purpose-driven work:</strong> Every feature we build has a clear intention to improve users' lives</li>
+                            <li><strong>User empathy:</strong> We deeply understand the struggles of digital distraction</li>
+                            <li><strong>Innovation:</strong> We are not afraid to challenge conventional approaches</li>
+                            <li><strong>Transparency:</strong> We believe in honest communication and ethical practices</li>
+                            <li><strong>Growth mindset:</strong> We are always learning and improving</li>
+                            <li><strong>Work-life balance:</strong> We practice what we preach about intentional time use</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="virtue-footer">
+        <div class="virtue-footer-content">
+            <div class="virtue-footer-grid">
+                <div class="virtue-footer-about">
+                    <div class="virtue-footer-title">Virtue: Digital Detox</div>
+                    <p style="font-size:14px; line-height:1.6;">
+                        Helping you reclaim your time and build a healthier relationship with technology. Disconnect to reconnect.
+                    </p>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Quick Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="team.html">Team</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Get in Touch</div>
+                    <a href="mailto:support@virtue-digital-detox.in"><strong>General:</strong> support@virtue-digital-detox.in</a>
+                    <a href="mailto:careers@virtue-digital-detox.in"><strong>Careers:</strong> careers@virtue-digital-detox.in</a>
+                    <a href="mailto:partnerships@virtue-digital-detox.in"><strong>Partnerships:</strong> partnerships@virtue-digital-detox.in</a>
+                </div>
+            </div>
+            <div class="virtue-footer-bottom">
+                © 2024 Virtue: Digital Detox. All rights reserved. Built with intention. | <a href="privacy-policy.html" style="color: #e6f2de; text-decoration: underline;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

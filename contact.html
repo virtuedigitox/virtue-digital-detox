@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us - Virtue: Digital Detox</title>
+    <meta name="description" content="Get in touch with Virtue: Digital Detox" />
+    <meta name="theme-color" content="#e6f2de" />
+    <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: linear-gradient(135deg, #e6f2de 0%, #f9f9f9 100%);
+        }
+
+        .page-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .virtue-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #e6f2de;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .virtue-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virtue-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            text-decoration: none;
+        }
+
+        .virtue-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .virtue-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .virtue-nav a {
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .virtue-nav a:hover {
+            color: #2c5f2d;
+        }
+
+        /* Contact Section */
+        .virtue-contact-section {
+            padding: 80px 20px;
+        }
+
+        .virtue-contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .virtue-section-heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #1a3a1b;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .virtue-section-subheading {
+            text-align: center;
+            font-size: 18px;
+            color: #444444;
+            margin-bottom: 50px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .virtue-contact-content {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 28px;
+            padding: 50px;
+            box-shadow: 0 18px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .virtue-contact-intro {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444444;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .virtue-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .virtue-contact-card {
+            background: #f5f9f5;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            border: 2px solid #e6f2de;
+            transition: all 0.3s ease;
+        }
+
+        .virtue-contact-card:hover {
+            border-color: #2c5f2d;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(44, 95, 45, 0.15);
+        }
+
+        .virtue-contact-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .virtue-contact-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 12px;
+        }
+
+        .virtue-contact-card p {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .virtue-contact-card a {
+            display: inline-block;
+            color: #2c5f2d;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.2s ease;
+        }
+
+        .virtue-contact-card a:hover {
+            color: #1a3a1b;
+        }
+
+        .virtue-contact-support {
+            background: #e6f2de;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .virtue-contact-support h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 16px;
+        }
+
+        .virtue-contact-support p {
+            font-size: 16px;
+            color: #444444;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .virtue-contact-support-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #2c5f2d;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(44, 95, 45, 0.3);
+        }
+
+        .virtue-contact-support-btn:hover {
+            background: #1a3a1b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(44, 95, 45, 0.4);
+        }
+
+        /* Footer */
+        .virtue-footer {
+            background: #1a3a1b;
+            color: #e6f2de;
+            padding: 40px 20px 20px;
+        }
+
+        .virtue-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .virtue-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .virtue-footer-about {
+            max-width: 350px;
+        }
+
+        .virtue-footer-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .virtue-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .virtue-footer-links a {
+            color: #e6f2de;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .virtue-footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .virtue-footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(230, 242, 222, 0.2);
+            font-size: 14px;
+            color: rgba(230, 242, 222, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .virtue-section-heading {
+                font-size: 36px;
+            }
+
+            .virtue-contact-content {
+                padding: 30px 25px;
+            }
+
+            .virtue-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-root">
+    <!-- Header -->
+    <header class="virtue-header">
+        <div class="virtue-header-inner">
+            <a href="index.html" class="virtue-logo">
+                <img src="ColourLogo.png" alt="Virtue logo" class="virtue-logo-img" />
+            </a>
+            <nav class="virtue-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="virtue-contact-section">
+            <div class="virtue-contact-container">
+                <h1 class="virtue-section-heading">Get in Touch</h1>
+                <p class="virtue-section-subheading">We're Here to Help</p>
+                
+                <div class="virtue-contact-content">
+                    <p class="virtue-contact-intro">
+                        Have questions, feedback, or just want to say hello? We would love to hear from you. Choose the best way to reach us below.
+                    </p>
+
+                    <div class="virtue-contact-grid">
+                        <div class="virtue-contact-card">
+                            <div class="virtue-contact-icon">💬</div>
+                            <h3>General Inquiries</h3>
+                            <p>Questions about Virtue or need assistance? We're here to help.</p>
+                            <a href="mailto:support@virtue-digital-detox.in">support@virtue-digital-detox.in</a>
+                        </div>
+
+                        <div class="virtue-contact-card">
+                            <div class="virtue-contact-icon">💼</div>
+                            <h3>Careers</h3>
+                            <p>Interested in joining our mission? Let's talk about opportunities.</p>
+                            <a href="mailto:careers@virtue-digital-detox.in">careers@virtue-digital-detox.in</a>
+                        </div>
+
+                        <div class="virtue-contact-card">
+                            <div class="virtue-contact-icon">🤝</div>
+                            <h3>Partnerships</h3>
+                            <p>Want to collaborate or partner with us? We're open to meaningful connections.</p>
+                            <a href="mailto:partnerships@virtue-digital-detox.in">partnerships@virtue-digital-detox.in</a>
+                        </div>
+                    </div>
+
+                    <div class="virtue-contact-support">
+                        <h3>Need Technical Support?</h3>
+                        <p>For app-related issues, bug reports, or feature requests, please use our support form for the fastest response.</p>
+                        <a href="https://forms.gle/g9CCwJ3giZpSD6m37" target="_blank" class="virtue-contact-support-btn">
+                            Open Support Form
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="virtue-footer">
+        <div class="virtue-footer-content">
+            <div class="virtue-footer-grid">
+                <div class="virtue-footer-about">
+                    <div class="virtue-footer-title">Virtue: Digital Detox</div>
+                    <p style="font-size:14px; line-height:1.6;">
+                        Helping you reclaim your time and build a healthier relationship with technology. Disconnect to reconnect.
+                    </p>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Quick Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="team.html">Team</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Get in Touch</div>
+                    <a href="mailto:support@virtue-digital-detox.in"><strong>General:</strong> support@virtue-digital-detox.in</a>
+                    <a href="mailto:careers@virtue-digital-detox.in"><strong>Careers:</strong> careers@virtue-digital-detox.in</a>
+                    <a href="mailto:partnerships@virtue-digital-detox.in"><strong>Partnerships:</strong> partnerships@virtue-digital-detox.in</a>
+                </div>
+            </div>
+            <div class="virtue-footer-bottom">
+                © 2024 Virtue: Digital Detox. All rights reserved. Built with intention. | <a href="privacy-policy.html" style="color: #e6f2de; text-decoration: underline;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us - Virtue: Digital Detox</title>
+    <meta name="description" content="Learn about Virtue: Digital Detox - Reclaiming Time, One Moment at a Time" />
+    <meta name="theme-color" content="#e6f2de" />
+    <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: linear-gradient(135deg, #e6f2de 0%, #f9f9f9 100%);
+        }
+
+        .page-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .virtue-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #e6f2de;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .virtue-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virtue-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            text-decoration: none;
+        }
+
+        .virtue-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .virtue-nav {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .virtue-nav a {
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .virtue-nav a:hover {
+            color: #2c5f2d;
+        }
+
+        /* About Section */
+        .virtue-about-section {
+            padding: 80px 20px;
+        }
+
+        .virtue-about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .virtue-about-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .virtue-about-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 12px;
+        }
+
+        .virtue-about-subtitle {
+            font-size: 18px;
+            color: #444444;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .virtue-about-content {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 28px;
+            padding: 40px 50px;
+            box-shadow: 0 18px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .virtue-about-story {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444444;
+        }
+
+        .virtue-about-paragraph {
+            margin-bottom: 16px;
+        }
+
+        .virtue-about-dropcap::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 46px;
+            float: left;
+            line-height: 40px;
+            padding-right: 12px;
+            color: #2c5f2d;
+        }
+
+        .virtue-about-highlight {
+            font-weight: 700;
+            color: #2c5f2d;
+        }
+
+        /* Footer */
+        .virtue-footer {
+            background: #1a3a1b;
+            color: #e6f2de;
+            padding: 40px 20px 20px;
+        }
+
+        .virtue-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .virtue-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .virtue-footer-about {
+            max-width: 350px;
+        }
+
+        .virtue-footer-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .virtue-footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .virtue-footer-links a {
+            color: #e6f2de;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+
+        .virtue-footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .virtue-footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(230, 242, 222, 0.2);
+            font-size: 14px;
+            color: rgba(230, 242, 222, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .virtue-about-title {
+                font-size: 36px;
+            }
+
+            .virtue-about-content {
+                padding: 30px 25px;
+            }
+
+            .virtue-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-root">
+    <!-- Header -->
+    <header class="virtue-header">
+        <div class="virtue-header-inner">
+            <a href="index.html" class="virtue-logo">
+                <img src="ColourLogo.png" alt="Virtue logo" class="virtue-logo-img" />
+            </a>
+            <nav class="virtue-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="careers.html">Careers</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="virtue-about-section">
+            <div class="virtue-about-container">
+                <div class="virtue-about-header">
+                    <h1 class="virtue-about-title">About Us</h1>
+                    <p class="virtue-about-subtitle">Reclaiming Time, One Moment at a Time</p>
+                </div>
+                <div class="virtue-about-content">
+                    <div class="virtue-about-story">
+                        <p class="virtue-about-paragraph virtue-about-dropcap">
+                            In a world where our phones have become extensions of ourselves, we noticed something troubling. Hours were slipping away into endless scrolls, meaningful moments were being traded for quick dopamine hits, and the line between using technology and being used by it had blurred.
+                        </p>
+                        <p class="virtue-about-paragraph">
+                            <span class="virtue-about-highlight">Virtue was born from a simple question:</span> What if we could help people reclaim their time without feeling punished for it? What if breaking free from digital distractions could actually feel rewarding?
+                        </p>
+                        <p class="virtue-about-paragraph">
+                            We are not anti-technology. We are pro-intention. We believe your phone should serve you, not the other way around. That is why we created Virtue: an app that does not just block distractions, but <span class="virtue-about-highlight">celebrates your commitment to being present</span> by rewarding you for the time you reclaim.
+                        </p>
+                        <p class="virtue-about-paragraph">
+                            Our journey began when we realised that traditional app blockers felt restrictive and punitive. They told you what you could not do, but never celebrated what you actually achieved.
+                        </p>
+                        <p class="virtue-about-paragraph">
+                            We spent months researching behavioural psychology, talking to people struggling with phone addiction, and understanding what truly motivates lasting change. The answer was not in restrictions; it was in <span class="virtue-about-highlight">positive reinforcement and tangible rewards</span>. That is when Virtue transformed from an idea into a mission.
+                        </p>
+                        <p class="virtue-about-paragraph">
+                            Today, we are building more than just an app. We are cultivating a community of people who believe that time is our most precious resource, and that every moment of presence is worth celebrating.
+                        </p>
+                        <p class="virtue-about-paragraph">
+                            Join us in building a healthier relationship with technology, where you are in control, your time is truly yours, and every step towards digital wellness is recognised.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="virtue-footer">
+        <div class="virtue-footer-content">
+            <div class="virtue-footer-grid">
+                <div class="virtue-footer-about">
+                    <div class="virtue-footer-title">Virtue: Digital Detox</div>
+                    <p style="font-size:14px; line-height:1.6;">
+                        Helping you reclaim your time and build a healthier relationship with technology. Disconnect to reconnect.
+                    </p>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Quick Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="team.html">Team</a>
+                    <a href="careers.html">Careers</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Get in Touch</div>
+                    <a href="mailto:support@virtue-digital-detox.in"><strong>General:</strong> support@virtue-digital-detox.in</a>
+                    <a href="mailto:careers@virtue-digital-detox.in"><strong>Careers:</strong> careers@virtue-digital-detox.in</a>
+                    <a href="mailto:partnerships@virtue-digital-detox.in"><strong>Partnerships:</strong> partnerships@virtue-digital-detox.in</a>
+                </div>
+            </div>
+            <div class="virtue-footer-bottom">
+                © 2024 Virtue: Digital Detox. All rights reserved. Built with intention. | <a href="privacy-policy.html" style="color: #e6f2de; text-decoration: underline;">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

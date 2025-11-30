@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy - Virtue: Digital Detox</title>
+    <meta name="description" content="Privacy Policy for Virtue: Digital Detox" />
+    <meta name="theme-color" content="#e6f2de" />
+    <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: #f9f9f9;
+        }
+
+        .page-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .virtue-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #e6f2de;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .virtue-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virtue-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            text-decoration: none;
+        }
+
+        .virtue-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .back-link {
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #2c5f2d;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: #1a3a1b;
+        }
+
+        /* Privacy Policy Content */
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .privacy-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 12px;
+        }
+
+        .privacy-updated {
+            font-size: 14px;
+            color: #666666;
+            font-style: italic;
+        }
+
+        .privacy-content {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .privacy-intro {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #444444;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e6f2de;
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a3a1b;
+            margin-bottom: 16px;
+        }
+
+        .privacy-section h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: #2c5f2d;
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        .privacy-section p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #444444;
+            margin-bottom: 16px;
+        }
+
+        .privacy-section ul, .privacy-section ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        .privacy-section li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #444444;
+            margin-bottom: 8px;
+        }
+
+        .privacy-section strong {
+            color: #2c5f2d;
+            font-weight: 600;
+        }
+
+        .privacy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .privacy-table th,
+        .privacy-table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #e0e0e0;
+        }
+
+        .privacy-table th {
+            background: #e6f2de;
+            font-weight: 600;
+            color: #1a3a1b;
+        }
+
+        .contact-box {
+            background: #f5f9f5;
+            border-left: 4px solid #2c5f2d;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        .virtue-footer {
+            background: #1a3a1b;
+            color: #e6f2de;
+            padding: 40px 20px 20px;
+        }
+
+        .virtue-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .virtue-footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(230, 242, 222, 0.2);
+            font-size: 14px;
+            color: rgba(230, 242, 222, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .privacy-title {
+                font-size: 36px;
+            }
+
+            .privacy-content {
+                padding: 30px 20px;
+            }
+
+            .privacy-section h2 {
+                font-size: 24px;
+            }
+
+            .privacy-section h3 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-root">
+    <!-- Header -->
+    <header class="virtue-header">
+        <div class="virtue-header-inner">
+            <a href="index.html" class="virtue-logo">
+                <img src="ColourLogo.png" alt="Virtue logo" class="virtue-logo-img" />
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="privacy-container">
+            <div class="privacy-header">
+                <h1 class="privacy-title">Privacy Policy</h1>
+                <p class="privacy-updated">Last Updated: November 30, 2024</p>
+            </div>
+
+            <div class="privacy-content">
+                <div class="privacy-intro">
+                    <p>This Privacy Policy ("Privacy Policy") describes how Virtue: Digital Detox ("we," "us," "our," or "Operator") collects, uses, stores, and protects your personal information when you use the Virtue: Digital Detox mobile application ("Application") and related services ("Service").</p>
+                    
+                    <p>The protection of your privacy and personal data is our highest priority. We process personal data in strict compliance with applicable data protection laws, including the General Data Protection Regulation (EU) 2016/679 ("GDPR") and the Information Technology Act, 2000 and its rules.</p>
+                    
+                    <p>By using our Service, you agree to the collection and use of information in accordance with this Privacy Policy. We may update this Privacy Policy from time to time, and we will notify you of any changes. The latest version is always available within the Application and on our website.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>1. General Information</h2>
+                    <p>Under applicable data protection laws, we are the controller of your personal data. This means we determine the purposes and means of processing your personal information in connection with providing the Service.</p>
+                    
+                    <p>We process your personal data only when:</p>
+                    <ul>
+                        <li>It is necessary for the performance of our contract with you (i.e., providing the Service)</li>
+                        <li>We have a legitimate interest in processing the data</li>
+                        <li>We are required to do so by law</li>
+                        <li>You have given us your explicit consent</li>
+                    </ul>
+                    
+                    <p>Personal data is processed both manually and through automated means to ensure the proper functioning of the Service and to maintain our internal procedures.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>2. Information Collection and Use</h2>
+                    <p><strong>Virtue: Digital Detox does not collect or store any Personal Information</strong> except data needed for optional features such as account creation, progress backup, and app synchronization. These features are entirely voluntary, and you may use the core Service without creating an account.</p>
+                    
+                    <p>All usage statistics, blocking configurations, and app data are <strong>stored locally on your device</strong> and are not accessible by us or our affiliates. We do not have access to information about which apps you block or how you use the Service.</p>
+                    
+                    <h3>Third-Party Services</h3>
+                    <p>We use the following third-party services for analytics, advertising, and crash reporting. These services are governed by their own privacy policies:</p>
+                    <ul>
+                        <li><strong>Google Play Services</strong> - For app distribution and core functionality</li>
+                        <li><strong>Firebase Analytics</strong> - For anonymous usage analytics</li>
+                        <li><strong>Firebase Crashlytics</strong> - For crash reporting and app stability</li>
+                        <li><strong>AdMob</strong> - For serving advertisements (if applicable)</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>3. Purposes of Personal Data Processing</h2>
+                    <p>We may process your personal data for the following purposes:</p>
+                    <ul>
+                        <li><strong>Performance of contract:</strong> To provide the Service and fulfill our contractual obligations to you</li>
+                        <li><strong>Legal compliance:</strong> To comply with applicable laws and regulations</li>
+                        <li><strong>Legitimate interests:</strong> To protect our rights, improve the Service, and create anonymized statistics</li>
+                        <li><strong>Marketing communications:</strong> To send you information about the Service via email or push notifications (only with your consent)</li>
+                        <li><strong>Customer support:</strong> To respond to your inquiries and provide assistance</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>4. Types of Personal Data Processed</h2>
+                    <h3>4.1 Account Data (Optional)</h3>
+                    <p>If you choose to create an account, we collect:</p>
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Email address</td>
+                                <td>Account creation, authentication, customer support, marketing communications (with consent)</td>
+                            </tr>
+                            <tr>
+                                <td>Password (encrypted)</td>
+                                <td>Account security and authentication</td>
+                            </tr>
+                            <tr>
+                                <td>App configuration data</td>
+                                <td>Backup and synchronization of your settings across devices</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>4.2 Technical Data</h3>
+                    <p>When you use the Service, we may automatically collect:</p>
+                    <ul>
+                        <li>Device information (model, operating system version)</li>
+                        <li>IP address</li>
+                        <li>App version and configuration</li>
+                        <li>Crash logs and error reports (anonymous)</li>
+                    </ul>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>5. Installed Apps Inventory Access</h2>
+                    <p>The Service requires access to your device's list of installed applications to provide its core functionality, including:</p>
+                    <ul>
+                        <li>Allowing you to select which apps to block</li>
+                        <li>Displaying usage statistics for blocked apps</li>
+                        <li>Enforcing blocking rules you configure</li>
+                    </ul>
+                    
+                    <p><strong>This data is used solely on your device and is never transmitted to our servers or third parties.</strong> We do not collect, store, or have access to information about which apps you have installed or which apps you choose to block.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>6. Usage Accessibility Services</h2>
+                    <p>The Service uses Android Accessibility Services to detect when you attempt to open blocked applications and to enforce your blocking preferences. This permission is essential for the core functionality of the app.</p>
+                    
+                    <p><strong>We do not use Accessibility Services to collect, transmit, or store any data about your device usage.</strong> All blocking logic operates locally on your device.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>7. Log Data</h2>
+                    <p>In case of an error in the Application, we collect Log Data through third-party services. This may include:</p>
+                    <ul>
+                        <li>Device IP address</li>
+                        <li>Device name and model</li>
+                        <li>Operating system version</li>
+                        <li>App configuration at the time of error</li>
+                        <li>Time and date of the error</li>
+                        <li>Other diagnostic statistics</li>
+                    </ul>
+                    
+                    <p>This data is used solely to improve the Service and ensure reliability. It does not contain personally identifiable information and cannot be used to identify individual users.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>8. Data Retention</h2>
+                    <table class="privacy-table">
+                        <thead>
+                            <tr>
+                                <th>Purpose</th>
+                                <th>Retention Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account data</td>
+                                <td>For the duration of your account registration</td>
+                            </tr>
+                            <tr>
+                                <td>Legal compliance</td>
+                                <td>As required by applicable laws</td>
+                            </tr>
+                            <tr>
+                                <td>Legitimate interests</td>
+                                <td>Up to 3 years from collection, unless legally required otherwise</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing communications</td>
+                                <td>Until consent is withdrawn</td>
+                            </tr>
+                            <tr>
+                                <td>Customer support</td>
+                                <td>For the duration of your account registration</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>9. Data Security</h2>
+                    <p>We implement appropriate technical and organizational security measures to protect your personal data against:</p>
+                    <ul>
+                        <li>Unauthorized access or disclosure</li>
+                        <li>Accidental loss or destruction</li>
+                        <li>Malicious attacks</li>
+                        <li>Unlawful processing</li>
+                    </ul>
+                    
+                    <p>Your account password is encrypted and stored securely. We recommend using a strong, unique password and not sharing your login credentials with anyone.</p>
+                    
+                    <p>However, please note that no method of electronic transmission or storage is 100% secure. While we strive to protect your personal data, we cannot guarantee absolute security.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>10. Data Sharing and Recipients</h2>
+                    <p>We do not sell, trade, or rent your personal information to third parties. We may share your data only with:</p>
+                    <ul>
+                        <li><strong>Service providers:</strong> Third-party companies that help us provide the Service (e.g., cloud hosting, analytics, crash reporting)</li>
+                        <li><strong>Legal authorities:</strong> When required by law or to protect our legal rights</li>
+                        <li><strong>Business transfers:</strong> In connection with a merger, acquisition, or sale of assets (you will be notified)</li>
+                    </ul>
+                    
+                    <p>All third-party service providers are contractually obligated to protect your data and use it only for the purposes we specify.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>11. Your Rights</h2>
+                    <p>Under applicable data protection laws, you have the following rights:</p>
+                    <ul>
+                        <li><strong>Right to access:</strong> Request a copy of the personal data we hold about you</li>
+                        <li><strong>Right to rectification:</strong> Request correction of inaccurate or incomplete data</li>
+                        <li><strong>Right to erasure:</strong> Request deletion of your personal data (subject to legal obligations)</li>
+                        <li><strong>Right to restrict processing:</strong> Request that we limit how we use your data</li>
+                        <li><strong>Right to data portability:</strong> Request transfer of your data to another service</li>
+                        <li><strong>Right to object:</strong> Object to processing based on legitimate interests</li>
+                        <li><strong>Right to withdraw consent:</strong> Withdraw consent for processing at any time</li>
+                        <li><strong>Right to lodge a complaint:</strong> File a complaint with your local data protection authority</li>
+                    </ul>
+                    
+                    <p>To exercise any of these rights, please contact us using the information provided below.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>12. Marketing Communications</h2>
+                    <p>With your consent, we may send you marketing communications about the Service via email or push notifications. You can opt out at any time by:</p>
+                    <ul>
+                        <li>Clicking the unsubscribe link in any email</li>
+                        <li>Adjusting notification settings in the Application</li>
+                        <li>Contacting us directly at the email below</li>
+                    </ul>
+                    
+                    <p>Opting out of marketing communications will not affect other aspects of the Service.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>13. Children's Privacy</h2>
+                    <p>The Service is not intended for children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. If you believe we have inadvertently collected data from a child, please contact us immediately.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>14. International Data Transfers</h2>
+                    <p>Your personal data may be transferred to and processed in countries outside your country of residence. We ensure that appropriate safeguards are in place, such as standard contractual clauses approved by relevant authorities, to protect your data in accordance with this Privacy Policy.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>15. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, regulatory, or operational reasons. We will notify you of any material changes by:</p>
+                    <ul>
+                        <li>Posting the updated policy in the Application</li>
+                        <li>Sending you an email notification (if you have an account)</li>
+                        <li>Displaying a prominent notice in the Application</li>
+                    </ul>
+                    
+                    <p>Your continued use of the Service after changes are posted constitutes your acceptance of the updated Privacy Policy.</p>
+                </div>
+
+                <div class="privacy-section">
+                    <h2>16. Contact Us</h2>
+                    <div class="contact-box">
+                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                        <p><strong>Email:</strong> <a href="mailto:support@virtue-digital-detox.in">support@virtue-digital-detox.in</a></p>
+                        <p><strong>Privacy Inquiries:</strong> <a href="mailto:privacy@virtue-digital-detox.in">privacy@virtue-digital-detox.in</a></p>
+                    </div>
+                    
+                    <p>We will respond to your inquiry within 30 days of receipt.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="virtue-footer">
+        <div class="virtue-footer-content">
+            <div class="virtue-footer-bottom">
+                © 2024 Virtue: Digital Detox. All rights reserved. Built with intention.
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
