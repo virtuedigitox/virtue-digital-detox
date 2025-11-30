@@ -6,7 +6,7 @@ A static website for Virtue Digital Detox - "Disconnect to Reconnect!"
 - **Home**: index.html (main landing page)
 - **Virtue Page**: virtue.html
 - **Home Alternative**: Virtue_ Digital Detox home.html
-- **Contact**: Virtue_ Digital Detox contant .html
+- **Contact**: contact.html
 
 ## Deployment
 This site is deployed on GitHub Pages.
