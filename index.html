@@ -53,9 +53,10 @@
         .virtue-header {
             position: sticky;
             top: 0;
-            z-index: 50;
+            z-index: 1000;
             background: #e6f2de;
             border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .virtue-header-inner {
@@ -65,6 +66,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
         }
 
         .virtue-logo {
@@ -1142,8 +1144,16 @@
         }
 
         .virtue-testimonials-wrapper-outer {
-            overflow: hidden;
+            overflow-x: auto;
+            overflow-y: hidden;
             padding: 40px 0;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .virtue-testimonials-wrapper-outer::-webkit-scrollbar {
+            display: none;
         }
 
         .virtue-testimonials-wrapper {
@@ -1157,6 +1167,7 @@
             flex: 0 0 calc(33.333% - 20px);
             min-width: calc(33.333% - 20px);
             transition: all 0.5s ease;
+            scroll-snap-align: center;
         }
 
         .virtue-testimonial-content {
@@ -1310,6 +1321,9 @@
                 gap: 16px;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 border-top: 1px solid rgba(0, 0, 0, 0.08);
+                z-index: 999;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
             }
             
             .virtue-nav.active {
@@ -1325,18 +1339,31 @@
                 display: flex;
             }
 
+            .virtue-nav-dropdown {
+                width: 100%;
+            }
+
+            .virtue-nav-dropdown-btn {
+                width: 100%;
+                justify-content: space-between;
+                padding: 8px 0;
+            }
+
             .virtue-nav-dropdown-content {
                 position: static;
                 transform: none;
                 box-shadow: none;
-                background: transparent;
-                padding: 0;
+                background: rgba(255, 255, 255, 0.3);
+                padding: 8px 0;
                 margin-top: 8px;
+                border-radius: 8px;
+                opacity: 1;
+                visibility: visible;
             }
 
             .virtue-nav-dropdown-content a {
-                padding: 8px 16px;
-                font-size: 13px;
+                padding: 10px 16px;
+                font-size: 14px;
             }
 
             .virtue-hero {
@@ -1402,12 +1429,25 @@
             }
 
             .virtue-testimonials-carousel-container {
-                padding: 0 60px;
+                padding: 0 50px;
+            }
+
+            .virtue-testimonials-wrapper-outer {
+                scroll-snap-type: x mandatory;
             }
 
             .virtue-testimonial-card {
-                flex: 0 0 calc(50% - 15px);
-                min-width: calc(50% - 15px);
+                flex: 0 0 90%;
+                min-width: 90%;
+            }
+
+            .virtue-testimonial-side .virtue-testimonial-content {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .virtue-testimonial-center .virtue-testimonial-content {
+                transform: scale(1);
             }
 
             .virtue-testimonial-btn {
@@ -1508,12 +1548,12 @@
             }
             
             .virtue-testimonials-carousel-container {
-                padding: 0 50px;
+                padding: 0 40px;
             }
 
             .virtue-testimonial-card {
-                flex: 0 0 85%;
-                min-width: 85%;
+                flex: 0 0 90%;
+                min-width: 90%;
             }
 
             .virtue-testimonial-content {
@@ -1529,17 +1569,17 @@
             }
 
             .virtue-testimonial-btn {
-                width: 36px;
-                height: 36px;
-                font-size: 20px;
+                width: 32px;
+                height: 32px;
+                font-size: 18px;
             }
 
             .virtue-testimonial-btn-left {
-                left: 5px;
+                left: 2px;
             }
 
             .virtue-testimonial-btn-right {
-                right: 5px;
+                right: 2px;
             }
             
             .virtue-benefit-card,
@@ -1618,6 +1658,24 @@
             
             .virtue-playstore-btn {
                 padding: 10px 16px;
+            }
+
+            .virtue-testimonials-carousel-container {
+                padding: 0 35px;
+            }
+
+            .virtue-testimonial-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 16px;
+            }
+
+            .virtue-testimonial-content {
+                padding: 25px 20px;
+            }
+
+            .virtue-testimonial-quote {
+                font-size: 14px;
             }
         }
     </style>
