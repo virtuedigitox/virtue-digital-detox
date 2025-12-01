@@ -1,0 +1,428 @@
+/* Mobile Optimizations for Virtue Digital Detox Website */
+
+/* Enhanced viewport and touch optimization */
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(44, 95, 45, 0.2);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile Navigation Toggle */
+.virtue-nav-toggle {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 8px;
+    color: #2c5f2d;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Touch-friendly buttons */
+button, a, input, select, textarea {
+    -webkit-tap-highlight-color: rgba(44, 95, 45, 0.2);
+}
+
+/* Improved image handling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Tablet breakpoint (768px and below) */
+@media (max-width: 768px) {
+    .virtue-header-inner {
+        padding: 12px 20px;
+    }
+
+    .virtue-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #e6f2de;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 100;
+    }
+    
+    .virtue-nav.active {
+        display: flex;
+    }
+    
+    .virtue-nav a {
+        font-size: 16px;
+        padding: 8px 0;
+        width: 100%;
+    }
+
+    .virtue-nav-toggle {
+        display: flex;
+    }
+
+    .virtue-nav-dropdown-content {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    .virtue-nav-dropdown-content a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    /* Hero section adjustments */
+    .virtue-hero {
+        padding: 50px 20px 40px;
+    }
+
+    .virtue-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .virtue-hero-art {
+        order: -1;
+    }
+
+    .virtue-hero-title {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+    
+    .virtue-hero-tagline {
+        font-size: 18px;
+    }
+
+    .virtue-hero-description {
+        font-size: 16px;
+    }
+
+    /* Section headings */
+    .virtue-section-heading,
+    .virtue-section-heading-left,
+    .virtue-section-heading-white {
+        font-size: 32px;
+    }
+
+    /* Content sections */
+    .virtue-benefits-section,
+    .virtue-unique-section,
+    .virtue-features-section,
+    .virtue-strict-section,
+    .virtue-testimonials-section,
+    .virtue-cta-section,
+    .virtue-about-section {
+        padding: 50px 20px;
+    }
+
+    /* Grid layouts */
+    .virtue-unique-content,
+    .virtue-feature-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .virtue-feature-row-reverse {
+        direction: ltr;
+    }
+
+    .virtue-feature-image {
+        order: -1;
+    }
+
+    /* Cards and items */
+    .virtue-benefit-card,
+    .virtue-stat-card,
+    .virtue-contact-item {
+        padding: 30px 20px;
+    }
+
+    /* Team cards */
+    .virtue-team-grid,
+    .virtue-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .virtue-team-card {
+        height: 550px;
+    }
+
+    .virtue-team-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Carousel adjustments */
+    .virtue-carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+    
+    .virtue-carousel-btn-left {
+        left: 5px;
+    }
+    
+    .virtue-carousel-btn-right {
+        right: 5px;
+    }
+
+    /* Testimonials */
+    .virtue-testimonials-carousel-container {
+        padding: 0 60px;
+    }
+
+    .virtue-testimonial-card {
+        flex: 0 0 calc(50% - 15px);
+        min-width: calc(50% - 15px);
+    }
+
+    .virtue-testimonial-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    /* Buttons */
+    .virtue-playstore-btn {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+    
+    .virtue-playstore-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .virtue-playstore-text-small {
+        font-size: 8px;
+    }
+    
+    .virtue-playstore-text-large {
+        font-size: 15px;
+    }
+
+    /* Footer */
+    .virtue-footer-inner {
+        padding: 50px 20px 30px;
+    }
+}
+
+/* Small mobile breakpoint (600px and below) */
+@media (max-width: 600px) {
+    .virtue-hero-title {
+        font-size: 28px;
+    }
+    
+    .virtue-hero-tagline {
+        font-size: 16px;
+    }
+    
+    .virtue-hero-description {
+        font-size: 15px;
+    }
+    
+    .virtue-section-heading,
+    .virtue-section-heading-left,
+    .virtue-section-heading-white {
+        font-size: 28px;
+    }
+    
+    .virtue-about-title {
+        font-size: 32px;
+    }
+
+    .virtue-about-content {
+        padding: 30px 24px;
+        border-radius: 20px;
+    }
+    
+    .virtue-testimonials-carousel-container {
+        padding: 0 50px;
+    }
+
+    .virtue-testimonial-card {
+        flex: 0 0 85%;
+        min-width: 85%;
+    }
+
+    .virtue-testimonial-content {
+        padding: 30px 25px;
+    }
+
+    .virtue-testimonial-quote {
+        font-size: 15px;
+    }
+
+    .virtue-testimonial-name {
+        font-size: 18px;
+    }
+
+    .virtue-testimonial-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 20px;
+    }
+
+    .virtue-testimonial-btn-left {
+        left: 5px;
+    }
+
+    .virtue-testimonial-btn-right {
+        right: 5px;
+    }
+    
+    .virtue-benefit-card h3 {
+        font-size: 20px;
+    }
+    
+    .virtue-feature-title {
+        font-size: 22px;
+    }
+    
+    .virtue-feature-description,
+    .virtue-unique-description {
+        font-size: 15px;
+    }
+    
+    .virtue-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .virtue-footer-inner {
+        padding: 40px 20px 20px;
+    }
+
+    .virtue-cta-benefit {
+        font-size: 18px;
+    }
+
+    .virtue-stat-number {
+        font-size: 36px;
+    }
+}
+
+/* Extra small devices (400px and below) */
+@media (max-width: 400px) {
+    .virtue-header-inner {
+        padding: 10px 16px;
+    }
+    
+    .virtue-logo-img {
+        height: 40px;
+    }
+    
+    .virtue-hero {
+        padding: 40px 16px 30px;
+    }
+    
+    .virtue-hero-title {
+        font-size: 24px;
+    }
+    
+    .virtue-hero-tagline {
+        font-size: 14px;
+    }
+    
+    .virtue-hero-description {
+        font-size: 14px;
+    }
+    
+    .virtue-section-heading,
+    .virtue-section-heading-left,
+    .virtue-section-heading-white {
+        font-size: 24px;
+    }
+    
+    .virtue-about-content {
+        padding: 24px 18px;
+    }
+    
+    .virtue-team-photo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .virtue-team-name {
+        font-size: 24px;
+    }
+    
+    .virtue-playstore-btn {
+        padding: 10px 16px;
+    }
+
+    .virtue-benefit-card,
+    .virtue-stat-card,
+    .virtue-contact-item {
+        padding: 25px 16px;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .virtue-hero {
+        padding: 30px 20px;
+    }
+
+    .virtue-hero-title {
+        font-size: 24px;
+    }
+
+    .virtue-hero-image {
+        max-width: 300px;
+    }
+
+    .virtue-section-heading,
+    .virtue-section-heading-left,
+    .virtue-section-heading-white {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+    overflow-x: hidden;
+}
+
+.virtue-container,
+.virtue-hero-inner,
+.virtue-about-container,
+.virtue-footer-inner {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Improve touch scrolling */
+.virtue-carousel-wrapper-outer,
+.virtue-testimonials-wrapper-outer {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+/* Better focus states for mobile */
+@media (hover: none) and (pointer: coarse) {
+    button:focus,
+    a:focus {
+        outline: 2px solid #2c5f2d;
+        outline-offset: 2px;
+    }
+}

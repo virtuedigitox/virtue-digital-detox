@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
     <title>Virtue: Digital Detox</title>
     <meta name="description" content="Virtue: Digital Detox - Disconnect to Reconnect" />
     <meta name="theme-color" content="#e6f2de" />
@@ -196,8 +196,14 @@
             display: none;
             border: none;
             background: none;
-            font-size: 24px;
+            font-size: 28px;
             cursor: pointer;
+            padding: 8px;
+            color: #2c5f2d;
+            min-width: 44px;
+            min-height: 44px;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Hero */
@@ -388,6 +394,8 @@
 
         .virtue-carousel-slide img {
             max-width: 260px;
+            width: 100%;
+            height: auto;
             border-radius: 26px;
             box-shadow: 0 18px 55px rgba(0, 0, 0, 0.35);
             transition: transform 0.3s ease, opacity 0.3s ease;
@@ -869,10 +877,15 @@
         @media (max-width: 900px) {
             .virtue-hero-inner {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             .virtue-hero-art {
                 order: -1;
+            }
+            
+            .virtue-hero-image {
+                max-width: 400px;
             }
         }
 
@@ -1282,15 +1295,34 @@
 
         @media (max-width: 768px) {
             .virtue-header-inner {
-                padding: 10px 16px;
+                padding: 12px 20px;
             }
 
             .virtue-nav {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #e6f2de;
+                flex-direction: column;
+                padding: 20px;
+                gap: 16px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                border-top: 1px solid rgba(0, 0, 0, 0.08);
+            }
+            
+            .virtue-nav.active {
+                display: flex;
+            }
+            
+            .virtue-nav a {
+                font-size: 16px;
+                padding: 8px 0;
             }
 
             .virtue-nav-toggle {
-                display: block;
+                display: flex;
             }
 
             .virtue-nav-dropdown-content {
@@ -1308,11 +1340,16 @@
             }
 
             .virtue-hero {
-                padding: 60px 18px 40px;
+                padding: 50px 20px 40px;
             }
 
             .virtue-hero-title {
-                font-size: 34px;
+                font-size: 36px;
+                margin-bottom: 16px;
+            }
+            
+            .virtue-hero-tagline {
+                font-size: 18px;
             }
 
             .virtue-about-title {
@@ -1320,7 +1357,8 @@
             }
 
             .virtue-about-content {
-                padding: 40px 30px;
+                padding: 30px 24px;
+                border-radius: 20px;
             }
 
             .virtue-about-paragraph {
@@ -1399,9 +1437,76 @@
             .virtue-join-section {
                 padding: 30px 20px;
             }
+            
+            .virtue-benefits-section,
+            .virtue-unique-section,
+            .virtue-features-section,
+            .virtue-strict-section,
+            .virtue-testimonials-section,
+            .virtue-cta-section {
+                padding: 50px 20px;
+            }
+            
+            .virtue-about-section {
+                padding: 50px 20px;
+            }
+            
+            .virtue-carousel-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+            
+            .virtue-carousel-btn-left {
+                left: 5px;
+            }
+            
+            .virtue-carousel-btn-right {
+                right: 5px;
+            }
+            
+            .virtue-playstore-btn {
+                padding: 12px 18px;
+                font-size: 13px;
+            }
+            
+            .virtue-playstore-icon {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .virtue-playstore-text-small {
+                font-size: 8px;
+            }
+            
+            .virtue-playstore-text-large {
+                font-size: 15px;
+            }
         }
 
         @media (max-width: 600px) {
+            .virtue-hero-title {
+                font-size: 28px;
+            }
+            
+            .virtue-hero-tagline {
+                font-size: 16px;
+            }
+            
+            .virtue-hero-description {
+                font-size: 15px;
+            }
+            
+            .virtue-section-heading,
+            .virtue-section-heading-left,
+            .virtue-section-heading-white {
+                font-size: 28px;
+            }
+            
+            .virtue-about-title {
+                font-size: 32px;
+            }
+            
             .virtue-testimonials-carousel-container {
                 padding: 0 50px;
             }
@@ -1435,6 +1540,84 @@
 
             .virtue-testimonial-btn-right {
                 right: 5px;
+            }
+            
+            .virtue-benefit-card,
+            .virtue-stat-card,
+            .virtue-contact-item {
+                padding: 30px 20px;
+            }
+            
+            .virtue-benefit-card h3 {
+                font-size: 20px;
+            }
+            
+            .virtue-feature-title {
+                font-size: 22px;
+            }
+            
+            .virtue-feature-description,
+            .virtue-unique-description {
+                font-size: 15px;
+            }
+            
+            .virtue-footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .virtue-footer-inner {
+                padding: 40px 20px 20px;
+            }
+        }
+        
+        /* Extra small devices */
+        @media (max-width: 400px) {
+            .virtue-header-inner {
+                padding: 10px 16px;
+            }
+            
+            .virtue-logo-img {
+                height: 40px;
+            }
+            
+            .virtue-hero {
+                padding: 40px 16px 30px;
+            }
+            
+            .virtue-hero-title {
+                font-size: 24px;
+            }
+            
+            .virtue-hero-tagline {
+                font-size: 14px;
+            }
+            
+            .virtue-hero-description {
+                font-size: 14px;
+            }
+            
+            .virtue-section-heading,
+            .virtue-section-heading-left,
+            .virtue-section-heading-white {
+                font-size: 24px;
+            }
+            
+            .virtue-about-content {
+                padding: 24px 18px;
+            }
+            
+            .virtue-team-photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .virtue-team-name {
+                font-size: 24px;
+            }
+            
+            .virtue-playstore-btn {
+                padding: 10px 16px;
             }
         }
     </style>
@@ -1967,6 +2150,83 @@
 
     // Initialize
     scrollToIndex(1);
+})();
+
+// Mobile Navigation Toggle
+(function() {
+    var toggle = document.getElementById('virtueNavToggle');
+    var nav = document.querySelector('.virtue-nav');
+    
+    if (!toggle || !nav) return;
+    
+    toggle.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        
+        // Update aria-expanded for accessibility
+        var isExpanded = nav.classList.contains('active');
+        toggle.setAttribute('aria-expanded', isExpanded);
+        
+        // Change icon
+        toggle.textContent = isExpanded ? '✕' : '☰';
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!toggle.contains(e.target) && !nav.contains(e.target)) {
+            nav.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = '☰';
+        }
+    });
+    
+    // Close menu when clicking on a link
+    var navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.textContent = '☰';
+        });
+    });
+})();
+
+// Touch-friendly carousel improvements
+(function() {
+    var carousels = document.querySelectorAll('.virtue-carousel-wrapper-outer, .virtue-testimonials-wrapper-outer');
+    
+    carousels.forEach(function(carousel) {
+        var startX = 0;
+        var scrollLeft = 0;
+        var isDown = false;
+        
+        carousel.addEventListener('touchstart', function(e) {
+            isDown = true;
+            startX = e.touches[0].pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        }, { passive: true });
+        
+        carousel.addEventListener('touchmove', function(e) {
+            if (!isDown) return;
+            var x = e.touches[0].pageX - carousel.offsetLeft;
+            var walk = (x - startX) * 2;
+            carousel.scrollLeft = scrollLeft - walk;
+        }, { passive: true });
+        
+        carousel.addEventListener('touchend', function() {
+            isDown = false;
+        });
+    });
+})();
+
+// Improve button tap targets on mobile
+(function() {
+    if ('ontouchstart' in window) {
+        var buttons = document.querySelectorAll('button, a');
+        buttons.forEach(function(btn) {
+            btn.style.minHeight = '44px';
+            btn.style.minWidth = '44px';
+        });
+    }
 })();
 </script>
 </body>
