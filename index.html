@@ -1322,6 +1322,120 @@
             box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
         }
 
+        /* FAQ Section Styles */
+        .virtue-faq-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .virtue-faq-container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .virtue-faq-item {
+            border-bottom: 1px solid #eaeaea;
+            background: white;
+        }
+
+        .virtue-faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .virtue-faq-question {
+            margin: 0;
+            padding: 20px 60px 20px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .virtue-faq-question:hover {
+            background-color: #f5f5f5;
+        }
+
+        .virtue-faq-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .virtue-faq-item.active .virtue-faq-question::after {
+            content: '-';
+        }
+
+        .virtue-faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #f9f9f9;
+        }
+
+        .virtue-faq-item.active .virtue-faq-answer {
+            max-height: 500px;
+        }
+
+        .virtue-faq-answer > div {
+            padding: 0 25px 20px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .virtue-people-ask {
+            margin-top: 60px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .virtue-section-subheading {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .virtue-ask-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .virtue-ask-list li {
+            margin-bottom: 12px;
+        }
+
+        .virtue-ask-list a {
+            display: block;
+            padding: 12px 20px;
+            background: #f5f7fa;
+            border-radius: 8px;
+            color: #2c3e50;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 4px solid #4CAF50;
+        }
+
+        .virtue-ask-list a:hover {
+            background: #e8f5e9;
+            transform: translateX(5px);
+        }
+
         @media (max-width: 768px) {
             .virtue-header-inner {
                 padding: 12px 20px;
@@ -2069,6 +2183,67 @@
                 </div>
             </div>
         </section>
+        <!-- FAQ Section -->
+        <section class="virtue-faq-section">
+            <div class="virtue-container">
+                <h2 class="virtue-section-heading">Frequently Asked Questions</h2>
+                <p class="virtue-section-intro">Get answers to common questions about digital detox and how Virtue can help you.</p>
+                
+                <div class="virtue-faq-container" itemscope itemtype="https://schema.org/FAQPage">
+                    <!-- FAQ Item 1 -->
+                    <div class="virtue-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h3 class="virtue-faq-question" itemprop="name">What is a digital detox and why is it important?</h3>
+                        <div class="virtue-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>A digital detox is a period when a person refrains from using tech devices to reduce stress and focus on real-life social interactions. It's important because excessive screen time can lead to digital eye strain, sleep disturbances, and decreased productivity. Virtue helps you gradually reduce screen time while building healthier digital habits.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="virtue-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h3 class="virtue-faq-question" itemprop="name">How does Virtue help with digital addiction?</h3>
+                        <div class="virtue-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>Virtue uses behavioral science and positive reinforcement to help you build better digital habits. Our app includes features like screen time tracking, app blocking, and financial incentives to motivate you to reduce screen time. The money commitment feature adds an extra layer of accountability by charging you when you exceed your screen time limits.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="virtue-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h3 class="virtue-faq-question" itemprop="name">Is Virtue suitable for children and teenagers?</h3>
+                        <div class="virtue-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>Yes, Virtue offers family plans with parental controls that allow you to monitor and manage your children's screen time. Our app helps establish healthy digital boundaries while still allowing access to educational content. Parents can set custom limits and receive activity reports to ensure balanced screen time.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="virtue-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <h3 class="virtue-faq-question" itemprop="name">How does the money commitment feature work?</h3>
+                        <div class="virtue-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                            <div itemprop="text">
+                                <p>When you set up Virtue, you can choose to commit a small amount of money that you'll be charged if you exceed your screen time limits. The money goes into a reward pool that you can earn back by meeting your goals. This behavioral economics approach has been shown to be highly effective in helping people change their habits.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- People Also Ask Section -->
+                <div class="virtue-people-ask">
+                    <h3 class="virtue-section-subheading">People Also Ask</h3>
+                    <ul class="virtue-ask-list">
+                        <li><a href="/blog/how-long-should-a-digital-detox-last">How long should a digital detox last to see benefits?</a></li>
+                        <li><a href="/blog/digital-detox-for-students">What are the best digital detox strategies for students?</a></li>
+                        <li><a href="/blog/phone-addiction-symptoms">What are the signs of smartphone addiction?</a></li>
+                        <li><a href="/blog/digital-wellbeing-tools">What are the best digital wellbeing tools besides Virtue?</a></li>
+                        <li><a href="/blog/improve-focus-without-phone">How can I improve my focus without completely giving up my phone?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -2104,6 +2279,39 @@
 </div>
 
 <script>
+// FAQ Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.virtue-faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.virtue-faq-question');
+        
+        question.addEventListener('click', () => {
+            // Close all other open items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+            
+            // Smooth scroll to question when opened
+            if (item.classList.contains('active')) {
+                const headerOffset = 100;
+                const elementPosition = item.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
 // Mobile nav toggle
 (function() {
     var toggle = document.getElementById('virtueNavToggle');
