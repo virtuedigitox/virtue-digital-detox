@@ -1411,29 +1411,163 @@
             list-style: none;
             padding: 0;
             margin: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
-        .virtue-ask-list li {
-            margin-bottom: 12px;
-        }
-
-        .virtue-ask-list a {
-            display: block;
-            padding: 12px 20px;
-            background: #f5f7fa;
-            border-radius: 8px;
-            color: #2c3e50;
-            text-decoration: none;
+        .virtue-ask-item {
+            margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             border-left: 4px solid #4CAF50;
         }
 
-        .virtue-ask-list a:hover {
-            background: #e8f5e9;
-            transform: translateX(5px);
+        .virtue-ask-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .virtue-ask-question {
+            margin: 0;
+            padding: 20px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            cursor: pointer;
+            position: relative;
+            background: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .virtue-ask-question:hover {
+            background: #f0f7f0;
+        }
+
+        .virtue-ask-question::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: #4CAF50;
+            transition: transform 0.3s ease;
+        }
+
+        .virtue-ask-item.active .virtue-ask-question::after {
+            content: '-';
+        }
+
+        .virtue-ask-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #ffffff;
+        }
+
+        .virtue-ask-item.active .virtue-ask-answer {
+            max-height: 1000px;
+        }
+
+        .virtue-ask-answer > div {
+            padding: 0 25px 20px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .virtue-ask-answer ul, 
+        .virtue-ask-answer ol {
+            margin: 10px 0 15px 20px;
+            padding-left: 15px;
+        }
+
+        .virtue-ask-answer li {
+            margin-bottom: 8px;
+        }
+
+        .virtue-read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #2c5f2d;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .virtue-read-more:hover {
+            color: #1a3a1b;
+            text-decoration: underline;
+        }
+
+        .virtue-comparison {
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .virtue-comparison-row {
+            display: flex;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .virtue-comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .virtue-comparison-feature {
+            flex: 2;
+            padding: 12px 15px;
+            background: #f9f9f9;
+            font-weight: 600;
+        }
+
+        .virtue-comparison-value,
+        .virtue-comparison-competitors {
+            flex: 1;
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        .virtue-comparison-value {
+            background: #f0f7f0;
+            color: #2c5f2d;
+            font-weight: 500;
+        }
+
+        .virtue-comparison-competitors {
+            background: #fff9f9;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .virtue-ask-question {
+                padding: 15px 45px 15px 15px;
+                font-size: 16px;
+            }
+            
+            .virtue-ask-answer > div {
+                padding: 0 15px 15px;
+            }
+            
+            .virtue-comparison-row {
+                flex-direction: column;
+            }
+            
+            .virtue-comparison-feature,
+            .virtue-comparison-value,
+            .virtue-comparison-competitors {
+                padding: 10px 15px;
+                text-align: left;
+            }
+            
+            .virtue-comparison-feature {
+                background: #f0f0f0;
+                font-weight: 600;
+            }
         }
 
         @media (max-width: 768px) {
@@ -2231,16 +2365,111 @@
                     </div>
                 </div>
 
-                <!-- People Also Ask Section -->
-                <div class="virtue-people-ask">
-                    <h3 class="virtue-section-subheading">People Also Ask</h3>
-                    <ul class="virtue-ask-list">
-                        <li><a href="/blog/how-long-should-a-digital-detox-last">How long should a digital detox last to see benefits?</a></li>
-                        <li><a href="/blog/digital-detox-for-students">What are the best digital detox strategies for students?</a></li>
-                        <li><a href="/blog/phone-addiction-symptoms">What are the signs of smartphone addiction?</a></li>
-                        <li><a href="/blog/digital-wellbeing-tools">What are the best digital wellbeing tools besides Virtue?</a></li>
-                        <li><a href="/blog/improve-focus-without-phone">How can I improve my focus without completely giving up my phone?</a></li>
-                    </ul>
+                <!-- People Also Ask Section with Schema.org Markup -->
+                <div class="virtue-people-ask" itemscope itemtype="https://schema.org/FAQPage">
+                    <h3 class="virtue-section-subheading">People Also Ask About Digital Detox</h3>
+                    <p class="virtue-section-intro" style="text-align: center; margin-bottom: 30px;">Common questions about digital wellbeing and how Virtue can help</p>
+                    
+                    <div class="virtue-ask-list">
+                        <!-- Question 1 -->
+                        <div class="virtue-ask-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <h4 class="virtue-ask-question" itemprop="name">How long should a digital detox last to see benefits?</h4>
+                            <div class="virtue-ask-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>Even short digital detoxes can show benefits. A weekend (48 hours) can help reduce stress and improve sleep, while a 7-10 day detox allows for more significant habit changes. Many Virtue users see noticeable improvements in focus and sleep quality within the first 3 days of reducing screen time.</p>
+                                    <p><a href="/blog/how-long-should-a-digital-detox-last" class="virtue-read-more">Read more about detox duration →</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 2 -->
+                        <div class="virtue-ask-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <h4 class="virtue-ask-question" itemprop="name">What are the best digital detox strategies for students?</h4>
+                            <div class="virtue-ask-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>For students, we recommend the 50/10 rule: 50 minutes of focused study followed by a 10-minute phone break. Use Virtue's <strong>Study Mode</strong> to block distracting apps during class and study times. Other effective strategies include:</p>
+                                    <ul>
+                                        <li>Using website blockers during exam periods</li>
+                                        <li>Creating a phone-free study zone</li>
+                                        <li>Scheduling social media time rather than constant checking</li>
+                                        <li>Using the Pomodoro technique with scheduled breaks</li>
+                                    </ul>
+                                    <p><a href="/blog/digital-detox-for-students" class="virtue-read-more">Student success stories →</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 3 -->
+                        <div class="virtue-ask-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <h4 class="virtue-ask-question" itemprop="name">What are the signs of smartphone addiction?</h4>
+                            <div class="virtue-ask-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>Common signs of smartphone addiction include:</p>
+                                    <ul>
+                                        <li>Reaching for your phone first thing in the morning</li>
+                                        <li>Feeling anxious when separated from your phone</li>
+                                        <li>Using your phone in inappropriate situations (meetings, meals, while driving)</li>
+                                        <li>Difficulty focusing on tasks without checking your phone</li>
+                                        <li>Losing track of time spent on your device</li>
+                                    </ul>
+                                    <p>Take our <a href="/phone-addiction-test" class="virtue-read-more">2-minute phone addiction test</a> to assess your usage patterns.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 4 -->
+                        <div class="virtue-ask-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <h4 class="virtue-ask-question" itemprop="name">How does Virtue compare to other digital wellbeing apps?</h4>
+                            <div class="virtue-ask-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>Virtue stands out with its unique commitment-based approach. Unlike basic screen time trackers, we use behavioral science to help you build lasting habits. Key differences include:</p>
+                                    <div class="virtue-comparison">
+                                        <div class="virtue-comparison-row">
+                                            <div class="virtue-comparison-feature">Financial Commitment</div>
+                                            <div class="virtue-comparison-value">✓ Only in Virtue</div>
+                                            <div class="virtue-comparison-competitors">✗ Others</div>
+                                        </div>
+                                        <div class="virtue-comparison-row">
+                                            <div class="virtue-comparison-feature">Reward System</div>
+                                            <div class="virtue-comparison-value">✓ Earn real rewards</div>
+                                            <div class="virtue-comparison-competitors">✗ Basic tracking only</div>
+                                        </div>
+                                        <div class="virtue-comparison-row">
+                                            <div class="virtue-comparison-feature">Family Plans</div>
+                                            <div class="virtue-comparison-value">✓ Full family support</div>
+                                            <div class="virtue-comparison-competitors">Limited or paid only</div>
+                                        </div>
+                                    </div>
+                                    <p><a href="/compare" class="virtue-read-more">See detailed comparison →</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Question 5 -->
+                        <div class="virtue-ask-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <h4 class="virtue-ask-question" itemprop="name">Can I still be productive while doing a digital detox?</h4>
+                            <div class="virtue-ask-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                                <div itemprop="text">
+                                    <p>Absolutely! A digital detox isn't about eliminating technology but using it intentionally. Here's how to stay productive:</p>
+                                    <ol>
+                                        <li>Use website blockers during work hours</li>
+                                        <li>Schedule specific times to check emails/messages</li>
+                                        <li>Enable focus modes on your devices</li>
+                                        <li>Use productivity apps that limit distractions</li>
+                                        <li>Take regular screen breaks using the 20-20-20 rule</li>
+                                    </ol>
+                                    <p>Virtue's <strong>Focus Mode</strong> helps you stay on track by blocking distractions while allowing access to essential tools.</p>
+                                    <p><a href="/blog/productive-digital-detox" class="virtue-read-more">Productivity tips for digital minimalism →</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="virtue-cta-box" style="margin-top: 40px; text-align: center; padding: 30px; background: #f0f7f0; border-radius: 12px;">
+                        <h4>Still have questions?</h4>
+                        <p>Our digital wellbeing experts are here to help you find the right balance.</p>
+                        <a href="/contact" class="virtue-cta-button" style="display: inline-block; margin-top: 15px;">Contact Our Support Team</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2279,37 +2508,61 @@
 </div>
 
 <script>
-// FAQ Toggle Functionality
+// FAQ and People Also Ask Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Handle FAQ items
     const faqItems = document.querySelectorAll('.virtue-faq-item');
+    const askItems = document.querySelectorAll('.virtue-ask-item');
     
-    faqItems.forEach(item => {
-        const question = item.querySelector('.virtue-faq-question');
-        
-        question.addEventListener('click', () => {
-            // Close all other open items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item && otherItem.classList.contains('active')) {
-                    otherItem.classList.remove('active');
+    function setupAccordion(items) {
+        items.forEach(item => {
+            const question = item.querySelector('.virtue-faq-question, .virtue-ask-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other open items in the same section
+                const parentSection = item.closest('.virtue-faq-container, .virtue-people-ask');
+                const allItems = parentSection.querySelectorAll('.virtue-faq-item, .virtue-ask-item');
+                
+                allItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                
+                // Smooth scroll to question when opened
+                if (item.classList.contains('active')) {
+                    const headerOffset = 100;
+                    const elementPosition = item.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
             });
             
-            // Toggle current item
-            item.classList.toggle('active');
-            
-            // Smooth scroll to question when opened
-            if (item.classList.contains('active')) {
-                const headerOffset = 100;
-                const elementPosition = item.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            // Add keyboard navigation
+            question.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
         });
-    });
+    }
+    
+    // Initialize both FAQ and People Also Ask sections
+    setupAccordion(faqItems);
+    setupAccordion(askItems);
+    
+    // Open first question by default for better UX
+    if (askItems.length > 0) {
+        askItems[0].classList.add('active');
+    }
 });
 
 // Mobile nav toggle
