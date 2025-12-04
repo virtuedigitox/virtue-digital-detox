@@ -1,0 +1,27 @@
+# robots.txt for Virtue: Digital Detox
+# https://virtue-digital-detox.in/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://virtue-digital-detox.in/sitemap.xml
+
+# Disallow admin and private directories
+Disallow: /admin/
+Disallow: /private/
+
+# Allow all other pages to be indexed
+Allow: /*.html$
+Allow: /*.css$
+Allow: /*.js$
+
+# Crawl-delay: 10  # Uncomment if needed to limit crawl rate
+
+# Block common crawl paths that might be irrelevant
+Disallow: /search
+Disallow: /?s=
+Disallow: /*?s=
+Disallow: /*&s=
+Disallow: /*?*
+Disallow: /*?
