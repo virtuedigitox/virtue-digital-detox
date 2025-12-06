@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms and Conditions - Virtue: Digital Detox</title>
+    <meta name="description" content="Terms and Conditions for using Virtue: Digital Detox app and services" />
+    <meta name="theme-color" content="#e6f2de" />
+    <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background: #f9f9f9;
+        }
+
+        .page-root {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Header */
+        .virtue-header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: #e6f2de;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .virtue-header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virtue-logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            text-decoration: none;
+        }
+
+        .virtue-logo-img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .back-link {
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: #2c5f2d;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s ease;
+        }
+
+        .back-link:hover {
+            background: #1a3a1b;
+        }
+
+        /* Terms Content */
+        .terms-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .terms-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .terms-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #2c5f2d;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .terms-updated {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .terms-content {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .terms-section {
+            margin-bottom: 40px;
+        }
+
+        .terms-section h2 {
+            color: #2c5f2d;
+            font-family: 'Playfair Display', serif;
+            margin: 30px 0 15px;
+            font-size: 24px;
+        }
+
+        .terms-section h3 {
+            color: #2c5f2d;
+            margin: 25px 0 10px;
+            font-size: 18px;
+        }
+
+        .terms-section p, .terms-section ul, .terms-section ol {
+            margin-bottom: 15px;
+            color: #444444;
+        }
+
+        .terms-section ul, .terms-section ol {
+            padding-left: 25px;
+        }
+
+        .terms-section li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #f0f7f0;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        /* Footer */
+        .virtue-footer {
+            background: #2c5f2d;
+            color: #ffffff;
+            padding: 40px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .virtue-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .virtue-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .virtue-footer-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .virtue-footer-links a {
+            display: block;
+            color: #e0e0e0;
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.2s ease;
+        }
+
+        .virtue-footer-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .virtue-footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: 30px 15px;
+            }
+            
+            .terms-content {
+                padding: 25px 20px;
+            }
+            
+            .terms-title {
+                font-size: 28px;
+            }
+            
+            .terms-section h2 {
+                font-size: 22px;
+            }
+            
+            .virtue-footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-root">
+    <!-- Header -->
+    <header class="virtue-header">
+        <div class="virtue-header-inner">
+            <a href="index.html" class="virtue-logo">
+                <img src="Colour_icon_logo.png" alt="Virtue: Digital Detox" class="virtue-logo-img" />
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="terms-container">
+            <div class="terms-header">
+                <h1 class="terms-title">Terms and Conditions</h1>
+                <p class="terms-updated">Last Updated: December 6, 2024</p>
+            </div>
+            
+            <div class="terms-content">
+                <div class="terms-section">
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing or using the Virtue: Digital Detox mobile application ("App") and related services ("Service"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use our Service.</p>
+                    <p>These Terms apply to all visitors, users, and others who access or use the Service. By using our Service, you represent that you are at least 13 years of age or have obtained parental/guardian consent if you are under 13.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>2. Description of Service</h2>
+                    <p>Virtue: Digital Detox is a mobile application designed to help users reduce screen time and develop healthier digital habits. Our Service includes:</p>
+                    <ul>
+                        <li>Screen time tracking and analytics</li>
+                        <li>App usage monitoring and blocking</li>
+                        <li>Personalized digital wellbeing insights</li>
+                        <li>Challenges and goals for reducing screen time</li>
+                        <li>Premium subscription features (where applicable)</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>3. User Accounts</h2>
+                    <p>To access certain features of the Service, you may be required to create an account. You agree to:</p>
+                    <ul>
+                        <li>Provide accurate and complete information when creating an account</li>
+                        <li>Maintain the security of your account credentials</li>
+                        <li>Be responsible for all activities that occur under your account</li>
+                        <li>Immediately notify us of any unauthorized use of your account</li>
+                    </ul>
+                    <p>We reserve the right to suspend or terminate accounts that violate these Terms or engage in fraudulent or harmful activities.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>4. Subscription and Payment</h2>
+                    <h3>4.1 Free and Premium Features</h3>
+                    <p>The App offers both free and premium features. Access to premium features requires a paid subscription.</p>
+                    
+                    <h3>4.2 Subscription Plans</h3>
+                    <p>We offer various subscription plans, including monthly and annual options. All subscription fees are clearly displayed within the App and on our website.</p>
+                    
+                    <h3>4.3 Payment Processing</h3>
+                    <p>All payments are processed through the respective app stores (Google Play Store, Apple App Store). We do not store your payment information on our servers.</p>
+                    
+                    <h3>4.4 Auto-Renewal</h3>
+                    <p>Subscriptions automatically renew at the end of each billing period unless canceled at least 24 hours before the end of the current period. You can manage your subscription through your app store account settings.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>5. Refund Policy</h2>
+                    <div class="highlight">
+                        <h3>5.1 General Refund Policy</h3>
+                        <p>Due to the digital nature of our Service, we generally do not offer refunds for subscription fees. However, we understand that exceptional circumstances may arise, and we will consider refund requests on a case-by-case basis.</p>
+                        
+                        <h3>5.2 Eligibility for Refund</h3>
+                        <p>Refund requests may be considered in the following circumstances:</p>
+                        <ul>
+                            <li>Technical issues that prevent the Service from functioning as described and that we are unable to resolve within a reasonable time</li>
+                            <li>Unauthorized or fraudulent charges</li>
+                            <li>Duplicate charges for the same subscription period</li>
+                        </ul>
+                        
+                        <h3>5.3 How to Request a Refund</h3>
+                        <p>To request a refund, please contact our support team at <a href="mailto:support@virtue-digital-detox.in" style="color: #2c5f2d; text-decoration: underline;">support@virtue-digital-detox.in</a> with the following information:</p>
+                        <ul>
+                            <li>Your account email address</li>
+                            <li>Date of purchase</li>
+                            <li>Order/receipt number</li>
+                            <li>Reason for the refund request</li>
+                        </ul>
+                        
+                        <h3>5.4 Processing Time</h3>
+                        <p>Refund requests are typically processed within 7-10 business days. The actual time for the refund to appear in your account may vary depending on your payment method and financial institution.</p>
+                        
+                        <h3>5.5 App Store Refunds</h3>
+                        <p>For subscriptions purchased through the Apple App Store or Google Play Store, refunds must be processed through the respective app store's refund process. We have no control over these processes and cannot guarantee refunds for in-app purchases.</p>
+                    </div>
+                </div>
+
+                <div class="terms-section">
+                    <h2>6. User Conduct</h2>
+                    <p>You agree not to:</p>
+                    <ul>
+                        <li>Use the Service for any illegal purpose or in violation of any laws</li>
+                        <li>Attempt to bypass or disable any security features of the Service</li>
+                        <li>Reverse engineer, decompile, or disassemble any portion of the App</li>
+                        <li>Use the Service to harass, abuse, or harm others</li>
+                        <li>Interfere with or disrupt the Service or servers connected to the Service</li>
+                    </ul>
+                </div>
+
+                <div class="terms-section">
+                    <h2>7. Intellectual Property</h2>
+                    <p>All content, features, and functionality of the Service, including but not limited to text, graphics, logos, and software, are the exclusive property of Virtue: Digital Detox and its licensors. These Terms do not grant you any rights to use our trademarks, logos, or other proprietary information without our express written consent.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>8. Limitation of Liability</h2>
+                    <p>To the maximum extent permitted by law, Virtue: Digital Detox shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or use, whether in an action in contract, tort, or otherwise, arising out of or in any way connected with the use of or inability to use the Service.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>9. Changes to Terms</h2>
+                    <p>We reserve the right to modify these Terms at any time. We will provide notice of any material changes through the Service or by other means. Your continued use of the Service after such changes constitutes your acceptance of the new Terms.</p>
+                </div>
+
+                <div class="terms-section">
+                    <h2>10. Contact Us</h2>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <p>
+                        Virtue: Digital Detox<br>
+                        Email: <a href="mailto:contact@virtue-digital-detox.in" style="color: #2c5f2d; text-decoration: underline;">contact@virtue-digital-detox.in</a><br>
+                        Website: <a href="https://virtue-digital-detox.in" style="color: #2c5f2d; text-decoration: underline;">https://virtue-digital-detox.in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="virtue-footer">
+        <div class="virtue-footer-content">
+            <div class="virtue-footer-grid">
+                <div>
+                    <div class="virtue-footer-title">Virtue: Digital Detox</div>
+                    <p style="color: #e0e0e0; margin-top: 15px; line-height: 1.6;">Helping you build healthier digital habits and reclaim your time from screen addiction.</p>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Quick Links</div>
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                    <a href="careers.html">Careers</a>
+                </div>
+                <div class="virtue-footer-links">
+                    <div class="virtue-footer-title" style="font-size:20px;">Get in Touch</div>
+                    <a href="mailto:contact@virtue-digital-detox.in">contact@virtue-digital-detox.in</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tools.virtue.app" target="_blank">Download on Google Play</a>
+                </div>
+            </div>
+            <div class="virtue-footer-bottom">
+                &copy; 2024 Virtue: Digital Detox. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
