@@ -1,0 +1,320 @@
+// Digital Wellbeing Quiz
+class DigitalWellbeingQuiz {
+    constructor() {
+        this.questions = [
+            {
+                question: "How many hours do you spend on your phone daily?",
+                options: ["Less than 2 hours", "2-4 hours", "4-6 hours", "More than 6 hours"],
+                scores: [1, 2, 3, 4]
+            },
+            {
+                question: "Do you check your phone within 30 minutes of waking up?",
+                options: ["Never", "Sometimes", "Often", "Always"],
+                scores: [1, 2, 3, 4]
+            },
+            {
+                question: "How often do you feel anxious when you can't check your phone?",
+                options: ["Never", "Rarely", "Sometimes", "Frequently"],
+                scores: [1, 2, 3, 4]
+            },
+            {
+                question: "Do you use your phone during meals?",
+                options: ["Never", "Rarely", "Sometimes", "Always"],
+                scores: [1, 2, 3, 4]
+            },
+            {
+                question: "How often do you use your phone right before bed?",
+                options: ["Never", "Rarely", "Sometimes", "Every night"],
+                scores: [1, 2, 3, 4]
+            }
+        ];
+        this.currentQuestion = 0;
+        this.score = 0;
+        this.quizContainer = null;
+        this.resultsContainer = null;
+        this.quizForm = null;
+    }
+
+    init() {
+        this.quizContainer = document.getElementById('digital-wellbeing-quiz');
+        this.resultsContainer = document.getElementById('quiz-results');
+        this.quizForm = document.getElementById('quiz-form');
+        
+        if (!this.quizContainer) return;
+        
+        this.displayQuestion();
+        this.setupEventListeners();
+    }
+
+    displayQuestion() {
+        if (this.currentQuestion >= this.questions.length) {
+            this.showResults();
+        this.trackQuizCompletion();
+            return;
+        }
+
+        const question = this.questions[this.currentQuestion];
+        let optionsHTML = '';
+        
+        question.options.forEach((option, index) => {
+            optionsHTML += `
+                <div class="quiz-option">
+                    <input type="radio" id="q${this.currentQuestion}-${index}" name="q${this.currentQuestion}" value="${index}" required>
+                    <label for="q${this.currentQuestion}-${index}">${option}</label>
+                </div>
+            `;
+        });
+
+        const progress = Math.round(((this.currentQuestion) / this.questions.length) * 100);
+        
+        this.quizContainer.innerHTML = `
+            <div class="quiz-progress">
+                <div class="progress-bar" style="width: ${progress}%"></div>
+            </div>
+            <h3>Question ${this.currentQuestion + 1} of ${this.questions.length}</h3>
+            <p class="quiz-question">${question.question}</p>
+            <div class="quiz-options">
+                ${optionsHTML}
+            </div>
+            <div class="quiz-navigation">
+                ${this.currentQuestion > 0 ? '<button type="button" class="quiz-prev">← Previous</button>' : ''}
+                <button type="submit" class="quiz-next">${this.currentQuestion === this.questions.length - 1 ? 'See Results' : 'Next'}</button>
+            </div>
+        `;
+    }
+
+    setupEventListeners() {
+        this.quizForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            this.handleNext();
+        });
+
+        // Event delegation for previous button
+        this.quizContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('quiz-prev')) {
+                this.currentQuestion--;
+                this.displayQuestion();
+            }
+        });
+    }
+
+    handleNext() {
+        const selectedOption = document.querySelector(`input[name="q${this.currentQuestion}"]:checked`);
+        if (!selectedOption) return;
+
+        const scoreIndex = parseInt(selectedOption.value);
+        this.score += this.questions[this.currentQuestion].scores[scoreIndex];
+        this.currentQuestion++;
+        this.displayQuestion();
+    }
+
+    trackQuizCompletion() {
+        // In a real implementation, you would send this data to your analytics platform
+        console.log('Quiz completed with score:', this.score);
+        // Example: sendToAnalytics({ event: 'quiz_completed', score: this.score });
+    }
+
+    showResults() {
+        let result = {};
+        let shareText = '';
+        const shareUrl = 'https://virtue-digital-detox.in?ref=quiz';
+        
+        // Set result based on score
+        if (this.score <= 10) {
+            result = {
+                title: "Digital Minimalist",
+                description: "You have a healthy relationship with technology! You're mindful of your digital habits and maintain good boundaries with your devices.",
+                tips: [
+                    "Continue your balanced approach to technology use.",
+                    "Share your digital wellbeing strategies with others.",
+                    "Consider using Virtue to maintain your healthy habits."
+                ]
+            };
+            shareText = `I'm a Digital Minimalist! I scored ${this.score}/20 on the Digital Wellbeing Quiz. Take the quiz and see where you stand! ${shareUrl}`;
+        } else if (this.score <= 15) {
+            result = {
+                title: "Occasionally Connected",
+                description: "You're aware of your digital habits but could benefit from more intentional screen time management.",
+                tips: [
+                    "Set specific times to check your phone.",
+                    "Try turning off non-essential notifications.",
+                    "Use Virtue to track and reduce your screen time."
+                ]
+            };
+            shareText = `I'm Occasionally Connected! I scored ${this.score}/20 on the Digital Wellbeing Quiz. Take the quiz and see where you stand! ${shareUrl}`;
+        } else if (this.score <= 19) {
+            result = {
+                title: "Frequently Distracted",
+                description: "Your digital habits might be affecting your wellbeing. Consider taking steps to reduce screen time.",
+                tips: [
+                    "Designate phone-free times during the day.",
+                    "Remove distracting apps from your home screen.",
+                    "Use Virtue's commitment feature to reduce screen time."
+                ]
+            };
+            shareText = `I'm Frequently Distracted! I scored ${this.score}/20 on the Digital Wellbeing Quiz. Take the quiz and see where you stand! ${shareUrl}`;
+        } else {
+            result = {
+                title: "Digitally Overloaded",
+                description: "Your digital habits may be significantly impacting your wellbeing. It's time to take control of your screen time.",
+                tips: [
+                    "Start with a digital detox challenge.",
+                    "Set strict boundaries for phone use, especially before bed.",
+                    "Use Virtue's accountability features to build healthier habits."
+                ]
+            };
+            shareText = `I'm Digitally Overloaded! I scored ${this.score}/20 on the Digital Wellbeing Quiz. Take the quiz and see where you stand! ${shareUrl}`;
+        }
+        
+        const tipsHTML = result.tips.map(tip => `<li>${tip}</li>`).join('');
+        
+        this.quizContainer.style.display = 'none';
+        this.resultsContainer.innerHTML = `
+            <div class="quiz-result">
+                <h3>Your Digital Wellbeing Score: ${this.score}/20</h3>
+                <h4>${result.title}</h4>
+                <p>${result.description}</p>
+                <div class="quiz-tips">
+                    <h5>Tips to improve:</h5>
+                    <ul>${tipsHTML}</ul>
+                </div>
+                
+                <!-- Share Buttons -->
+                <div class="quiz-share">
+                    <p>Share your results:</p>
+                    <div class="share-buttons">
+                        <button class="share-btn twitter" data-share-text="${encodeURIComponent(shareText)}">
+                            <i class="fab fa-twitter"></i> Twitter
+                        </button>
+                        <button class="share-btn facebook" data-share-url="${encodeURIComponent(shareUrl)}">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </button>
+                        <button class="share-btn linkedin" data-share-text="${encodeURIComponent(shareText)}" data-share-url="${encodeURIComponent(shareUrl)}">
+                            <i class="fab fa-linkedin-in"></i> LinkedIn
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Email Signup -->
+                <div class="quiz-newsletter">
+                    <h5>Get more tips to improve your digital wellbeing</h5>
+                    <form id="quiz-newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="cta-button">Get Free Tips</button>
+                    </form>
+                    <p class="privacy-notice">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+                
+                <!-- Related Content -->
+                <div class="related-content">
+                    <h5>Recommended for you:</h5>
+                    <div class="related-articles">
+                        <a href="/blog/digital-detox-tips" class="related-article">
+                            <img src="/images/thumbnails/detox-tips.jpg" alt="Digital Detox Tips" loading="lazy">
+                            <h6>10 Science-Backed Digital Detox Tips</h6>
+                        </a>
+                        <a href="/blog/phone-addiction" class="related-article">
+                            <img src="/images/thumbnails/phone-addiction.jpg" alt="Phone Addiction" loading="lazy">
+                            <h6>How to Overcome Phone Addiction</h6>
+                        </a>
+                        <a href="/blog/productive-morning-routine" class="related-article">
+                            <img src="/images/thumbnails/morning-routine.jpg" alt="Productive Morning Routine" loading="lazy">
+                            <h6>Create a Phone-Free Morning Routine</h6>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="quiz-actions">
+                    <button id="retake-quiz" class="quiz-retake">Retake Quiz</button>
+                    <a href="#download" class="cta-button">Try Virtue Now</a>
+                </div>
+            </div>
+        `;
+        
+        // Initialize share buttons and newsletter form
+        this.setupShareButtons();
+        this.setupNewsletterForm();
+        
+        // Add event listener for retake button
+        document.getElementById('retake-quiz').addEventListener('click', () => {
+            this.currentQuestion = 0;
+            this.score = 0;
+            this.quizContainer.style.display = 'block';
+            this.resultsContainer.style.display = 'none';
+            this.displayQuestion();
+        });
+        
+        this.resultsContainer.style.display = 'block';
+    }
+}
+
+    setupShareButtons() {
+        // Twitter sharing
+        const twitterButtons = document.querySelectorAll('.share-btn.twitter');
+        twitterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const text = button.getAttribute('data-share-text') || '';
+                window.open(`https://twitter.com/intent/tweet?text=${text}`, '_blank', 'width=550,height=420');
+            });
+        });
+
+        // Facebook sharing
+        const facebookButtons = document.querySelectorAll('.share-btn.facebook');
+        facebookButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const url = button.getAttribute('data-share-url') || '';
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank', 'width=550,height=420');
+            });
+        });
+
+        // LinkedIn sharing
+        const linkedinButtons = document.querySelectorAll('.share-btn.linkedin');
+        linkedinButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const text = button.getAttribute('data-share-text') || '';
+                const url = button.getAttribute('data-share-url') || '';
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank', 'width=550,height=570');
+            });
+        });
+    }
+
+    setupNewsletterForm() {
+        const form = document.getElementById('quiz-newsletter-form');
+        if (!form) return;
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const emailInput = form.querySelector('input[type="email"]');
+            if (!emailInput) return;
+            
+            const email = emailInput.value.trim();
+            if (!email) return;
+            
+            // In a real implementation, you would send this to your email service
+            console.log('Subscribing email:', email);
+            // Example: subscribeEmail(email);
+            
+            // Show success message
+            form.innerHTML = `
+                <div class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <p>Thanks for subscribing! Check your email for your first tip.</p>
+                </div>
+            `;
+        });
+    }
+}
+
+// Initialize quiz when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Load Font Awesome for social icons if not already loaded
+    if (!document.querySelector('.fa-twitter')) {
+        const fontAwesome = document.createElement('link');
+        fontAwesome.rel = 'stylesheet';
+        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+        document.head.appendChild(fontAwesome);
+    }
+    
+    const quiz = new DigitalWellbeingQuiz();
+    quiz.init();
+});
