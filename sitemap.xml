@@ -76,4 +76,61 @@
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/terms-conditions.html</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Blog Pages -->
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/complete-guide-digital-detox.html</loc>
+        <lastmod>2025-01-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/screen-time-effects-health.html</loc>
+        <lastmod>2025-01-12</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/overcome-phone-addiction.html</loc>
+        <lastmod>2025-01-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/digital-minimalism-productivity.html</loc>
+        <lastmod>2025-01-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/parents-guide-kids-screen-time.html</loc>
+        <lastmod>2025-01-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://virtue-digital-detox.in/blog/improve-sleep-reduce-screen-time.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

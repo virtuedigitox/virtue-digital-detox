@@ -9,7 +9,19 @@
     <meta name="theme-color" content="#e6f2de" />
     <meta name="keywords" content="digital detox, screen time, focus app, productivity, phone addiction, digital wellbeing, reduce screen time, focus app, digital balance" />
     <meta name="author" content="Virtue Digital Detox" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://virtue-digital-detox.in/" />
+    
+    <!-- Google Search Console Verification - Replace with your actual verification code -->
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+    <meta name="geo.region" content="IN" />
+    <meta name="geo.placename" content="India" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -17,7 +29,15 @@
     <meta property="og:title" content="Virtue: Digital Detox - Reclaim Your Focus & Time" />
     <meta property="og:description" content="Break free from digital addiction. Virtue helps you reduce screen time, improve focus, and build healthier digital habits. Start your journey today." />
     <meta property="og:image" content="https://virtue-digital-detox.in/ColourLogo.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Virtue Digital Detox App Logo" />
     <meta property="og:site_name" content="Virtue: Digital Detox" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="fb:app_id" content="YOUR_FACEBOOK_APP_ID" />
+    
+    <!-- Facebook Page Link -->
+    <meta property="article:publisher" content="https://www.facebook.com/YOUR_PAGE_NAME" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -25,7 +45,19 @@
     <meta name="twitter:title" content="Virtue: Digital Detox - Reclaim Your Focus & Time" />
     <meta name="twitter:description" content="Break free from digital addiction with Virtue. Reduce screen time and improve focus. Join thousands who've taken control of their digital lives." />
     <meta name="twitter:image" content="https://virtue-digital-detox.in/ColourLogo.png" />
+    <meta name="twitter:image:alt" content="Virtue Digital Detox App Logo" />
+    <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE" />
+    <meta name="twitter:creator" content="@YOUR_TWITTER_HANDLE" />
+    
+    <!-- LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png" />
     <link rel="icon" type="image/png" href="Colour_icon_logo.png" />
+    <link rel="apple-touch-icon" href="Colour_icon_logo.png" />
+    
+    <!-- Alternate languages (add if you have multi-language support) -->
+    <link rel="alternate" hreflang="en-in" href="https://virtue-digital-detox.in/" />
+    <link rel="alternate" hreflang="x-default" href="https://virtue-digital-detox.in/" />
 
     <!-- Preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2307,6 +2339,18 @@
         }
     </style>
 
+    <!-- Google Analytics 4 - Replace with your actual GA4 Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Z1F934M22M', {
+            'send_page_view': true,
+            'anonymize_ip': true
+        });
+    </script>
+
     <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
     {
@@ -2343,18 +2387,69 @@
         "name": "Virtue Digital Detox",
         "url": "https://virtue-digital-detox.in",
         "logo": "https://virtue-digital-detox.in/ColourLogo.png",
+        "description": "Helping people break free from digital addiction and build healthier relationships with technology",
+        "foundingDate": "2024",
         "sameAs": [
-            "https://twitter.com/virtuedetox",
-            "https://www.instagram.com/virtuedetox",
-            "https://www.facebook.com/virtuedetox"
+            "YOUR_FACEBOOK_PAGE_URL",
+            "YOUR_INSTAGRAM_PAGE_URL",
+            "YOUR_LINKEDIN_PAGE_URL"
         ],
         "contactPoint": [{
             "@type": "ContactPoint",
-            "telephone": "+1-555-123-4567",
             "contactType": "customer service",
             "email": "support@virtue-digital-detox.in",
-            "availableLanguage": ["English", "Hindi"]
-        }]
+            "availableLanguage": ["English", "Hindi"],
+            "areaServed": "IN"
+        }],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN",
+            "addressRegion": "India"
+        }
+    }
+    </script>
+    
+    <!-- Local Business Schema (if applicable) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Virtue Digital Detox",
+        "image": "https://virtue-digital-detox.in/ColourLogo.png",
+        "@id": "https://virtue-digital-detox.in",
+        "url": "https://virtue-digital-detox.in",
+        "telephone": "YOUR_PHONE_NUMBER",
+        "priceRange": "Free - Premium",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "YOUR_STREET_ADDRESS",
+            "addressLocality": "YOUR_CITY",
+            "addressRegion": "YOUR_STATE",
+            "postalCode": "YOUR_POSTAL_CODE",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": YOUR_LATITUDE,
+            "longitude": YOUR_LONGITUDE
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "YOUR_FACEBOOK_PAGE_URL",
+            "YOUR_INSTAGRAM_PAGE_URL",
+            "YOUR_LINKEDIN_PAGE_URL"
+        ]
     }
     </script>
     

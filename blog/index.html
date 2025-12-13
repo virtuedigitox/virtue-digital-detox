@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <title>Digital Detox Blog | Tips, Guides & Research - Virtue</title>
+    <meta name="description" content="Expert insights on digital wellbeing, screen time management, and building healthier tech habits. Research-backed tips from Virtue's digital detox experts." />
+    <meta name="keywords" content="digital detox blog, screen time tips, digital wellbeing, phone addiction help, focus improvement, productivity tips" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://virtue-digital-detox.in/blog/" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://virtue-digital-detox.in/blog/" />
+    <meta property="og:title" content="Digital Detox Blog - Virtue" />
+    <meta property="og:description" content="Expert insights on digital wellbeing and screen time management" />
+    <meta property="og:image" content="https://virtue-digital-detox.in/ColourLogo.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Digital Detox Blog - Virtue" />
+    <meta name="twitter:description" content="Expert insights on digital wellbeing and screen time management" />
+    
+    <link rel="icon" type="image/png" href="../Colour_icon_logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a3a1b 0%, #2c5f2d 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        
+        header p {
+            font-size: 18px;
+            color: #e6f2de;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            background: #e6f2de;
+            padding: 16px 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        nav a {
+            color: #2c5f2d;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #1a3a1b;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #e6f2de 0%, #d4e7d4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+        }
+        
+        .blog-card-content {
+            padding: 30px;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: #e6f2de;
+            color: #2c5f2d;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+        
+        .blog-card h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 24px;
+            margin-bottom: 12px;
+            color: #1a3a1b;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #999;
+            padding-top: 16px;
+            border-top: 1px solid #eee;
+        }
+        
+        .read-time {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #1a3a1b 0%, #2c5f2d 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        
+        footer a {
+            color: #e6f2de;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Schema.org Blog markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Virtue Digital Detox Blog",
+        "description": "Expert insights on digital wellbeing, screen time management, and building healthier tech habits",
+        "url": "https://virtue-digital-detox.in/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Virtue Digital Detox",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://virtue-digital-detox.in/ColourLogo.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="index.html">Blog</a>
+        <a href="../contact.html">Contact</a>
+    </nav>
+    
+    <header>
+        <h1>Digital Detox Blog</h1>
+        <p>Expert insights, research-backed tips, and practical guides for building healthier digital habits</p>
+    </header>
+    
+    <div class="container">
+        <div class="blog-grid">
+            <!-- Blog Post 1: Digital Detox Guide -->
+            <a href="complete-guide-digital-detox.html" class="blog-card">
+                <div class="blog-card-image">📱</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Guide</span>
+                    <h2>The Complete Guide to Digital Detox in 2025</h2>
+                    <p class="blog-excerpt">Everything you need to know about starting your digital detox journey. Learn proven strategies, common pitfalls, and how to maintain long-term success.</p>
+                    <div class="blog-meta">
+                        <span>Jan 15, 2025</span>
+                        <span class="read-time">⏱ 12 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 2: Screen Time Effects -->
+            <a href="screen-time-effects-health.html" class="blog-card">
+                <div class="blog-card-image">🧠</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Research</span>
+                    <h2>How Excessive Screen Time Affects Your Brain and Body</h2>
+                    <p class="blog-excerpt">Scientific research reveals the hidden impacts of too much screen time on mental health, sleep quality, and physical wellbeing.</p>
+                    <div class="blog-meta">
+                        <span>Jan 12, 2025</span>
+                        <span class="read-time">⏱ 10 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 3: Phone Addiction -->
+            <a href="overcome-phone-addiction.html" class="blog-card">
+                <div class="blog-card-image">🔓</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Tips</span>
+                    <h2>7 Proven Strategies to Overcome Phone Addiction</h2>
+                    <p class="blog-excerpt">Practical, actionable steps to break free from compulsive phone checking and reclaim your attention and time.</p>
+                    <div class="blog-meta">
+                        <span>Jan 10, 2025</span>
+                        <span class="read-time">⏱ 8 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 4: Productivity -->
+            <a href="digital-minimalism-productivity.html" class="blog-card">
+                <div class="blog-card-image">⚡</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Productivity</span>
+                    <h2>Digital Minimalism: The Secret to 10x Productivity</h2>
+                    <p class="blog-excerpt">How reducing digital clutter and distractions can dramatically boost your focus, creativity, and output.</p>
+                    <div class="blog-meta">
+                        <span>Jan 8, 2025</span>
+                        <span class="read-time">⏱ 9 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 5: Parents Guide -->
+            <a href="parents-guide-kids-screen-time.html" class="blog-card">
+                <div class="blog-card-image">👨‍👩‍👧‍👦</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Parenting</span>
+                    <h2>A Parent's Guide to Managing Kids' Screen Time</h2>
+                    <p class="blog-excerpt">Evidence-based strategies for setting healthy boundaries and fostering balanced tech use in children and teens.</p>
+                    <div class="blog-meta">
+                        <span>Jan 5, 2025</span>
+                        <span class="read-time">⏱ 11 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 6: Sleep Quality -->
+            <a href="improve-sleep-reduce-screen-time.html" class="blog-card">
+                <div class="blog-card-image">😴</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Health</span>
+                    <h2>How Reducing Screen Time Can Transform Your Sleep</h2>
+                    <p class="blog-excerpt">The science behind blue light, circadian rhythms, and practical tips for better sleep through digital boundaries.</p>
+                    <div class="blog-meta">
+                        <span>Jan 3, 2025</span>
+                        <span class="read-time">⏱ 7 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 7: Social Media -->
+            <a href="social-media-detox-benefits.html" class="blog-card">
+                <div class="blog-card-image">🌟</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Wellbeing</span>
+                    <h2>The Life-Changing Benefits of a Social Media Detox</h2>
+                    <p class="blog-excerpt">Real stories and research on how taking a break from social media can improve mental health and relationships.</p>
+                    <div class="blog-meta">
+                        <span>Dec 30, 2024</span>
+                        <span class="read-time">⏱ 10 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 8: Work-Life Balance -->
+            <a href="digital-boundaries-work-life-balance.html" class="blog-card">
+                <div class="blog-card-image">⚖️</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Work-Life</span>
+                    <h2>Setting Digital Boundaries for Better Work-Life Balance</h2>
+                    <p class="blog-excerpt">How to disconnect from work, prevent burnout, and create sustainable boundaries in our always-on world.</p>
+                    <div class="blog-meta">
+                        <span>Dec 28, 2024</span>
+                        <span class="read-time">⏱ 9 min read</span>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Blog Post 9: Mindfulness -->
+            <a href="mindfulness-techniques-digital-age.html" class="blog-card">
+                <div class="blog-card-image">🧘</div>
+                <div class="blog-card-content">
+                    <span class="blog-category">Mindfulness</span>
+                    <h2>Mindfulness Techniques for the Digital Age</h2>
+                    <p class="blog-excerpt">Practical mindfulness exercises to combat digital overwhelm and cultivate present-moment awareness.</p>
+                    <div class="blog-meta">
+                        <span>Dec 25, 2024</span>
+                        <span class="read-time">⏱ 8 min read</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Virtue Digital Detox. All rights reserved.</p>
+        <p style="margin-top: 10px;"><a href="../index.html">Back to Home</a></p>
+    </footer>
+</body>
+</html>
