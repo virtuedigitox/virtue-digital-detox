@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#439B08">
+  <title>Stay Focused · Virtue</title>
+  <style>
+    :root {
+      --green: #439B08;
+      --green-soft: #E6F2DD;
+      --text: #171717;
+      --muted: #5c5c5c;
+      --bg: #F5F5F5;
+      --card: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, var(--green-soft) 0%, var(--bg) 55%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 16px 48px rgba(23, 23, 23, 0.08);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--green-soft);
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    h1 {
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .tips {
+      text-align: left;
+      background: var(--bg);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+    }
+
+    .tips li {
+      margin-left: 18px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .tips li:last-child { margin-bottom: 0; }
+
+    .footer {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .footer strong { color: var(--green); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="badge"><span class="dot"></span> Virtue is protecting your focus</div>
+    <h1>This site is blocked right now</h1>
+    <p>
+      You set a limit on this website because you know what matters.
+      Take a breath — your future self will thank you.
+    </p>
+    <ul class="tips">
+      <li>Close this tab and return to what you were working on.</li>
+      <li>Need a short break? Use an extension in Virtue — not another scroll.</li>
+      <li>Every minute you protect is a vote for the person you're becoming.</li>
+    </ul>
+    <p class="footer">Protected by <strong>Virtue</strong></p>
+  </main>
+</body>
+</html>
