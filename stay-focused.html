@@ -8,6 +8,7 @@
   <style>
     :root {
       --green: #439B08;
+      --green-dark: #357006;
       --green-soft: #E6F2DD;
       --text: #171717;
       --muted: #5c5c5c;
@@ -36,6 +37,29 @@
       padding: 32px 28px;
       box-shadow: 0 16px 48px rgba(23, 23, 23, 0.08);
       text-align: center;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      object-fit: cover;
+      box-shadow: 0 8px 24px rgba(67, 155, 8, 0.22);
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.02em;
     }
 
     .badge {
@@ -94,6 +118,42 @@
 
     .tips li:last-child { margin-bottom: 0; }
 
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      max-width: 280px;
+      margin: 0 auto 20px;
+      padding: 14px 22px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--green) 0%, var(--green-dark) 100%);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(67, 155, 8, 0.28);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(67, 155, 8, 0.34);
+    }
+
+    .cta:active {
+      transform: translateY(0);
+    }
+
+    .cta-hint {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
     .footer {
       font-size: 0.85rem;
       color: var(--muted);
@@ -104,6 +164,11 @@
 </head>
 <body>
   <main class="card">
+    <header class="brand">
+      <img class="logo" src="virtue-logo.svg" alt="Virtue logo" width="72" height="72">
+      <span class="brand-name">Virtue</span>
+    </header>
+
     <div class="badge"><span class="dot"></span> Virtue is protecting your focus</div>
     <h1>This site is blocked right now</h1>
     <p>
@@ -115,7 +180,34 @@
       <li>Need a short break? Use an extension in Virtue — not another scroll.</li>
       <li>Every minute you protect is a vote for the person you're becoming.</li>
     </ul>
+
+    <a id="open-virtue" class="cta" href="#">Open Virtue</a>
+    <p class="cta-hint">Manage your block, use an extension, or adjust your limits.</p>
+
     <p class="footer">Protected by <strong>Virtue</strong></p>
   </main>
+
+  <script>
+    (function () {
+      var PACKAGE = "com.tools.virtue.app";
+      var PLAY_STORE = "https://play.google.com/store/apps/details?id=" + PACKAGE;
+      var INTENT =
+        "intent:#Intent;action=android.intent.action.MAIN;" +
+        "category=android.intent.category.LAUNCHER;" +
+        "package=" + PACKAGE + ";" +
+        "S.browser_fallback_url=" + encodeURIComponent(PLAY_STORE) + ";end";
+
+      function openVirtue() {
+        window.location.href = INTENT;
+      }
+
+      var btn = document.getElementById("open-virtue");
+      btn.href = INTENT;
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        openVirtue();
+      });
+    })();
+  </script>
 </body>
 </html>
