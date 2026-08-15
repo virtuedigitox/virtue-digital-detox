@@ -181,7 +181,7 @@
       <li>Every minute you protect is a vote for the person you're becoming.</li>
     </ul>
 
-    <a id="open-virtue" class="cta" href="#">Open Virtue</a>
+    <a id="open-virtue" class="cta" href="virtue://open">Open Virtue</a>
     <p class="cta-hint">Manage your block, use an extension, or adjust your limits.</p>
 
     <p class="footer">Protected by <strong>Virtue</strong></p>
@@ -189,24 +189,43 @@
 
   <script>
     (function () {
-      var PACKAGE = "com.tools.virtue.app";
-      var PLAY_STORE = "https://play.google.com/store/apps/details?id=" + PACKAGE;
-      var INTENT =
-        "intent:#Intent;action=android.intent.action.MAIN;" +
-        "category=android.intent.category.LAUNCHER;" +
-        "package=" + PACKAGE + ";" +
-        "S.browser_fallback_url=" + encodeURIComponent(PLAY_STORE) + ";end";
+      var DEEP_LINK = "virtue://open";
+      var PLAY_STORE = "https://play.google.com/store/apps/details?id=com.tools.virtue.app";
+      var PACKAGES = ["com.tools.virtue.app", "com.tools.virtue.app.qa"];
 
-      function openVirtue() {
-        window.location.href = INTENT;
+      function buildIntentUrl(packageName) {
+        return "intent://open#Intent;scheme=virtue;package=" + packageName + ";end";
+      }
+
+      function isPageVisible() {
+        return !document.hidden && document.visibilityState !== "hidden";
+      }
+
+      function openVirtue(e) {
+        if (e) e.preventDefault();
+
+        // Primary: custom scheme — works for prod and QA once the app registers virtue://open.
+        window.location.href = DEEP_LINK;
+
+        // Fallback 1/2: Chrome intent URLs scoped to each installed package (prod, then QA).
+        PACKAGES.forEach(function (pkg, index) {
+          setTimeout(function () {
+            if (isPageVisible()) {
+              window.location.href = buildIntentUrl(pkg);
+            }
+          }, 450 + index * 500);
+        });
+
+        // Last resort: Play Store only if the app did not open (page still visible).
+        setTimeout(function () {
+          if (isPageVisible()) {
+            window.location.href = PLAY_STORE;
+          }
+        }, 2200);
       }
 
       var btn = document.getElementById("open-virtue");
-      btn.href = INTENT;
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        openVirtue();
-      });
+      btn.addEventListener("click", openVirtue);
     })();
   </script>
 </body>
